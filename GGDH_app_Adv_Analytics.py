@@ -2,7 +2,8 @@
 
 import dash
 import dash_core_components as dcc
-import dash_html_components as html
+# import dash_html_components as html
+from dash import html as html
 from dash.dependencies import Input, Output, State
 import dash_daq as daq
 import dash_bootstrap_components as dbc
@@ -11,12 +12,13 @@ import pandas as pd
 import plotly.graph_objs as go
 import plotly.express as px
 import geopandas as gpd
+import requests
 import json
 from plotly.subplots import make_subplots
 
-path = 'C:/Users/fq_am/Pyhton Scripts/GGDH Ver 1.0/data/'
+path = 'https://raw.githubusercontent.com/AmmarFaiq/GGDH-Dash-Adv-Analytics/main/data/'
 
-geojsondata = gpd.read_file(path + 'wijk_2016_6.geojson')
+geojsondata = gpd.read_file("https://github.com/AmmarFaiq/GGDH-ver-1.0/raw/main/data/wijk_2016_6.geojson")
 
 geojsondata = geojsondata.to_crs(epsg=4326)
 geojsondata = geojsondata.explode(index_parts=False)
@@ -601,8 +603,6 @@ def update_graph_bar(year_value, future_year_value, xaxis_column_name, xaxis_col
 # take the first row of the dataframe and create a copy of it for n timess
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8090)
+    app.run_server(debug=True)
 
-
-# create a plotly button
 
