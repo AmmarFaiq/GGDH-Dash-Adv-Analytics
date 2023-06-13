@@ -1,9 +1,9 @@
 gunicorn
-dash
+dash==1.4.1
 dash-core-components
 dash-html-components
 dash_renderer
-dash-daq
+dash-daq==0.2.1
 dash-bootstrap-components
 numpy
 pandas
