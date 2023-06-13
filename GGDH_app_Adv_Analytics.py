@@ -18,7 +18,7 @@ from plotly.subplots import make_subplots
 
 path = 'https://raw.githubusercontent.com/AmmarFaiq/GGDH-Dash-Adv-Analytics/main/data/'
 
-geojsondata = gpd.read_file("https://github.com/AmmarFaiq/GGDH-ver-1.0/raw/main/data/wijk_2016_6.geojson")
+geojsondata = gpd.read_file("https://github.com/AmmarFaiq/GGDH-Dash-Adv-Analytics/raw/main/data/wijk_2016_6.geojson")
 
 geojsondata = geojsondata.to_crs(epsg=4326)
 geojsondata = geojsondata.explode(index_parts=False)
