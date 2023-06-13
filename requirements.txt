@@ -10,3 +10,4 @@ pandas
 plotly
 requests
 geopandas
+werkzeug==2.0.3
