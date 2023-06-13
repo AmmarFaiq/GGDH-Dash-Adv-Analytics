@@ -1,0 +1,150 @@
+body {
+  background-color:#f7fbfe;
+  font-family: "pt-sans-pro";
+}
+
+.side_bar {
+  height: 14%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #d6ebfa;
+  padding-left: 5%;
+  padding-right: 5%;
+  color:rgb(7, 7, 7);
+}
+
+.main {
+  font-size: 15px; 
+  padding: 50px 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+  color:#001158;
+}
+
+.footer {
+  position: relative;
+  left: -8px;
+  /* right: -50px; */
+  bottom: -20px;
+  width: 101%;
+  background-color: #001158;
+  padding-left: 0;
+}
+
+h1 {
+  color:#001158;
+  font-family: "pt-sans-pro";
+}
+
+h3 {
+  margin-block-start:0.3em;
+  font-size: smaller;
+  font-family: "pt-sans-pro";
+}
+
+h4 {
+  margin-block-end:0.3em;
+  font-size: smaller;
+  font-family: "pt-sans-pro";
+}
+
+.text{
+  margin: 10px;
+  padding: 25px;
+  align-self: center;
+  font-family: "pt-sans-pro";
+}
+
+.row{
+  display: flex;
+}
+
+/* Boxes */
+
+.box {
+  border-radius: 20px;
+  background-color: white;
+  margin: 5px;
+  padding: 20px;
+  box-shadow: 2px 2px 2px #aed8f5;
+}
+
+.box_comment {
+  border-radius: 20px;
+  background-color: #ADD8E6;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 2px 2px 2px #aed8f5;
+  font-size: small;
+  text-align: center;
+  font-family: "pt-sans-pro";
+}
+
+.box_emissions{
+  border-radius: 20px;
+  background-color: #F9F9F8;    
+  margin: 2px;
+  box-shadow: 2px 2px 2px #F9F9F8;
+  justify-content: center;
+  width: 50%;
+  text-align: center;
+  font-family: "pt-sans-pro";
+}
+/* Drop down */
+#drop_map .VirtualizedSelectFocusedOption {
+  background-color:#ffd100;
+}
+
+#drop_continent .VirtualizedSelectFocusedOption {
+  background-color:#ffd100;
+}
+
+/* Radio buttons */
+.radio {
+  display:flex;
+  justify-content: left;
+  place-content:space-evenly;
+  width: 100%;
+}
+
+.radio input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.radio label {
+  display: table-caption;
+  background-color: #F9F9F8;
+  padding: 5px 5px;
+  font-size: 16px;
+  border: 2px solid #F9F9F8;
+  border-radius: 15px;
+  width: 200%;
+  text-align: center;
+  font-family: "pt-sans-pro";
+}
+
+.radio input[type="radio"]:checked + label {
+  background-color: #ffd100;              
+  border: 2px solid #F9F9F8;
+}
+
+.radio label:hover {
+  background-color: #F9F9F8;
+  border: 2px solid #F9F9F8;
+}
+
+/* Scrollbars */
+*::-webkit-scrollbar {
+  width: 12px;               
+}
+*::-webkit-scrollbar-track {
+  background: #F9F9F8;        
+}
+*::-webkit-scrollbar-thumb {
+  background-color:#ffd100;    
+  border-radius: 20px;      
+  border: 3px solid #F9F9F8;  
+}
