@@ -47,8 +47,8 @@ values_all_regions = values_haaglanden + values_roaz
 
 geo_df = geo_df.query("gemnaam in @values_all_regions")
 
-with open(path + 'wijkgeo_all_file.json') as f:
-  geo_df_fff = json.load(f)
+# with open(path + 'wijkgeo_all_file.json') as f:
+#   geo_df_fff = json.load(f)
 
   
 df_cleanset = pd.read_csv(path + 'df_cleanset.csv')
@@ -529,20 +529,20 @@ def update_graph_map(year_value, future_year_value, xaxis_column_name, wijk_name
 
     if wijk_name == 'HadoksArea':    
         dff = dff.query("GMN in @values_hadoks")
-        fig = px.choropleth_mapbox(dff, geojson=geo_df_fff, color=(xaxis_column_name + '_Change'),
+        fig = px.choropleth_mapbox(dff, geojson=geo_df, color=(xaxis_column_name + '_Change'),
                             locations="WKC", featureidkey="properties.WKC", opacity = 0.3,
                             center={"lat": 52.0705, "lon": 4.3003}, color_continuous_scale=colorscale,
                             mapbox_style="carto-positron", zoom=10, hover_name="Wijknaam")
         
     elif wijk_name == "'s-gravenhage":    
-        fig = px.choropleth_mapbox(dff[dff.GMN == "'s-Gravenhage"], geojson=geo_df_fff, color=(xaxis_column_name + '_Change'),
+        fig = px.choropleth_mapbox(dff[dff.GMN == "'s-Gravenhage"], geojson=geo_df, color=(xaxis_column_name + '_Change'),
                             locations="WKC", featureidkey="properties.WKC", opacity = 0.3,
                             center={"lat": 52.0705, "lon": 4.3003}, color_continuous_scale=colorscale,
                             mapbox_style="carto-positron", zoom=10, hover_name="Wijknaam")
    
     else:
 
-        fig = px.choropleth_mapbox(dff[dff.GMN == wijk_name], geojson=geo_df_fff, color=(xaxis_column_name + '_Change'),
+        fig = px.choropleth_mapbox(dff[dff.GMN == wijk_name], geojson=geo_df, color=(xaxis_column_name + '_Change'),
                             locations="WKC", featureidkey="properties.WKC", opacity = 0.3,
                             center={"lat": 52.0705, "lon": 4.3003}, color_continuous_scale=colorscale,
                             mapbox_style="carto-positron", zoom=10, hover_name="Wijknaam")
