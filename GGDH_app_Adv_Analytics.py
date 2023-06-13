@@ -513,7 +513,7 @@ def update_graph_map(year_value, future_year_value, xaxis_column_name, wijk_name
     
     dff= df.copy()
     # THIS CALCULATION MIGHT STILL BE WRONG
-    dff[(xaxis_column_name + '_Change')] = dff[xaxis_column_name].groupby('Wijknaam').shift(-(future_year_value - year_value +1)) / dff[xaxis_column_name]
+    dff[(xaxis_column_name + '_Change')] = dff.groupby('Wijknaam')[xaxis_column_name].shift(-(future_year_value - year_value +1)) / dff[xaxis_column_name]
     # dff[(xaxis_column_name + '_Change')] = dff[(xaxis_column_name + '_Change')].bfill()
     dff = dff[dff['YEAR'] == year_value]
 
