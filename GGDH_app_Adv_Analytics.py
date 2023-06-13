@@ -53,7 +53,7 @@ geo_df = geo_df.query("gemnaam in @values_all_regions")
   
 df_cleanset = pd.read_csv(path + 'df_cleanset.csv')
 df_projected = pd.read_csv(path + 'df_projected.csv')
-df = df_cleanset.append(df_projected, ignore_index=True)
+df = pd.concat([df_cleanset, df_projected], ignore_index=True)
 
 # df_predicted = pd.read_csv(path + 'Pilot_Wijkindicatoren_RoyH_Final_Aangepast - predicted.csv')
 
