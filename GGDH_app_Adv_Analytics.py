@@ -75,9 +75,9 @@ radio_themes = dbc.RadioItems(
 
 # options_overall = df.columns[4:25]
 
-predictors_column = ['%_HVZ_Medication_user', '%_71to80', '%_Chronic_Hartfalen_patients','%_DIAB_Medication_user', '%_CHOL_Medication_user','%_Unemployment_benefit_user', '%_WMO_user', '%_Debt','UniqueMed_Count', '%_WLZ_user', 'Total_Population']
+predictors_column = ['Total_Population', '%_HVZ_Medication_user', '%_71to80', '%_Chronic_Hartfalen_patients','%_DIAB_Medication_user', '%_CHOL_Medication_user','%_Unemployment_benefit_user', '%_WMO_user', '%_Debt','UniqueMed_Count', '%_WLZ_user', 'ZVWKHUISARTS']
 
-predicted_column = ['Projection_demand', 'ZVWKHUISARTS','Total cost GP care']
+predicted_column = ['Projection_demand','Total cost GP care']
 
 predicted_year = [2025, 2030]
 
@@ -242,7 +242,7 @@ app.layout = html.Div([
                                     drop_var_post
                     ], style={'width': '25%','display': 'inline-block'}),
                     html.Div([
-                    html.Label(' Choose a projection year :', id='choose_post_year'#, style= {'margin': '5px'}
+                    html.Label(' Choose a projection period :', id='choose_post_year'#, style= {'margin': '5px'}
                                ),
                                     drop_post_year
                     ], style={'width': '25%','display': 'inline-block'}),
@@ -384,12 +384,12 @@ def update_graph(clickData,
                   "#3C50BF", 
                   "#4980DF", 
                   "#56B7FF",
-                  "#6ADDFF"
-                    # "#7FFCFF",
-                    # "#95FFF5",
-                    # "#ABFFE8",
-                    # "#C2FFE3",
-                    # "#DAFFE6"
+                  "#6ADDFF",
+                    "#7FFCFF",
+                    "#95FFF5",
+                    "#ABFFE8",
+                    "#C2FFE3",
+                    "#DAFFE6"
                   ]
     
     fig = make_subplots(specs=[[{"secondary_y": True}]])
@@ -433,7 +433,7 @@ def update_graph(clickData,
                                     method="restyle"
                                 ),
                                 dict(
-                                    args=[{'visible':False} ],
+                                    args=[{'visible':'legendonly'} ],
                                     label="Remove All",
                                     method="restyle"
                                 ),
@@ -522,7 +522,12 @@ def update_graph_map(year_value, future_year_value, xaxis_column_name, wijk_name
                   "#3C50BF", 
                   "#4980DF", 
                   "#56B7FF",
-                  "#6ADDFF"
+                  "#6ADDFF",
+                  "#7FFCFF",
+            "#95FFF5",
+            "#ABFFE8",
+            "#C2FFE3",
+            "#DAFFE6"
                   ]
 
     title = '{} - {} - {} (Original) with {} (Projection)'.format(xaxis_column_name, wijk_name, year_value, (future_year_value))
@@ -530,20 +535,20 @@ def update_graph_map(year_value, future_year_value, xaxis_column_name, wijk_name
     if wijk_name == 'HadoksArea':    
         dff = dff.query("GMN in @values_hadoks")
         fig = px.choropleth_mapbox(dff, geojson=geo_df, color=(xaxis_column_name + '_Change'),
-                            locations="WKC", featureidkey="properties.WKC", opacity = 0.3,
+                            locations="WKC", featureidkey="properties.WKC", opacity = 0.5,
                             center={"lat": 52.0705, "lon": 4.3003}, color_continuous_scale=colorscale,
                             mapbox_style="carto-positron", zoom=10, hover_name="Wijknaam")
         
     elif wijk_name == "'s-gravenhage":    
         fig = px.choropleth_mapbox(dff[dff.GMN == "'s-Gravenhage"], geojson=geo_df, color=(xaxis_column_name + '_Change'),
-                            locations="WKC", featureidkey="properties.WKC", opacity = 0.3,
+                            locations="WKC", featureidkey="properties.WKC", opacity = 0.5,
                             center={"lat": 52.0705, "lon": 4.3003}, color_continuous_scale=colorscale,
                             mapbox_style="carto-positron", zoom=10, hover_name="Wijknaam")
    
     else:
 
         fig = px.choropleth_mapbox(dff[dff.GMN == wijk_name], geojson=geo_df, color=(xaxis_column_name + '_Change'),
-                            locations="WKC", featureidkey="properties.WKC", opacity = 0.3,
+                            locations="WKC", featureidkey="properties.WKC", opacity = 0.5,
                             center={"lat": 52.0705, "lon": 4.3003}, color_continuous_scale=colorscale,
                             mapbox_style="carto-positron", zoom=10, hover_name="Wijknaam")
 
@@ -577,11 +582,11 @@ def update_graph_bar(year_value, future_year_value, xaxis_column_name, xaxis_col
         "#4980DF", 
         "#56B7FF",
         "#6ADDFF",
-            # "#7FFCFF",
-            # "#95FFF5",
-            # "#ABFFE8",
-            # "#C2FFE3",
-            # "#DAFFE6"
+            "#7FFCFF",
+            "#95FFF5",
+            "#ABFFE8",
+            "#C2FFE3",
+            "#DAFFE6"
         ]
 
     if wijk_name == 'HadoksArea':    
@@ -592,10 +597,48 @@ def update_graph_bar(year_value, future_year_value, xaxis_column_name, xaxis_col
         dff = dff[dff.GMN == "Wassenaar"]
     else:
         dff = dff[dff.GMN == wijk_name]
-    
-    fig = px.scatter(dff, x=xaxis_column_name, y=xaxis_column_name_project, color='model', marginal_x="histogram", marginal_y="rug", color_continuous_scale=colorscale)
+        
+    wijk_dict = {}
+    for i in range(len(dff['Wijknaam'].unique())):
+        wijk_dict[dff['Wijknaam'].unique()[i]] = i
+        
+        
+    fig = px.scatter(dff, x=xaxis_column_name, y=xaxis_column_name_project, color='model', symbol ='model', marginal_x="histogram", marginal_y="rug", color_continuous_scale=colorscale)
     title = '{} vs {} - {} (Original) with {} (Projection)'.format(xaxis_column_name_project, xaxis_column_name, year_value, future_year_value)   
+    fig.update_layout(dict(updatemenus=[
+                        dict(
+                            type = "buttons",
+                            direction = "left",
+                            buttons=list([
+                                
+                                dict(
+                                    args=["visible", True],
+                                    label="Select All",
+                                    method="restyle"
+                                ),
+                                dict(
+                                    args=[{'visible':'legendonly'} ],
+                                    label="Remove All",
+                                    method="restyle"
+                                ),
+                                #  dict(
+                                #     # args=["visible", True],
+                                #     args=[{'visible':False}, [37] ],
+                                #     label="Remove Prediction",
+                                #     method="restyle"
+                                # ),
+                            ]),
+                            pad={"r": 50, "t": -20},
+                            showactive=False,
+                            x=1,
+                            xanchor="right",
+                            y=1.1,
+                            yanchor="top"
+                        ),
+                    ]
+              ))
     
+
     return title, fig
 
 
