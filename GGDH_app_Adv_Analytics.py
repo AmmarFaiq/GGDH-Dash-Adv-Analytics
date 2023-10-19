@@ -48,7 +48,7 @@ values_all_regions = values_haaglanden + values_roaz
 
 geo_df = geo_df.query("gemnaam in @values_all_regions")
 
-with open(path + 'wijkgeo.json') as f:
+with open(path + 'wijkgeo_all_file.txt') as f:
   geo_df_fff = json.load(f)
 
   
