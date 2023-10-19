@@ -50,8 +50,7 @@ geo_df = geo_df.query("gemnaam in @values_all_regions")
 
 # with open(path + 'wijkgeo_all_file.txt') as f:
 #   geo_df_fff = json.load(path + 'wijkgeo_all_file.csv')
-geo_df_fff = json.load(path + 'wijkgeo.json')
-# geo_df_fff = geo_df.to_json()
+
   
 df_numeric = pd.read_csv(path + 'df_numeric_ver_2.csv', sep=',', encoding='latin-1')
 df_count = pd.read_csv(path + 'df_count_ver_2.csv', sep=',',encoding= 'latin-1')
@@ -1236,7 +1235,7 @@ def update_graph_map(
 
 
     if bivariate_style == 0:
-        fig = create_bivariate_map(df_supply_demand_CLUSTERED_bivariate[['WKC', 'Wijknaam', 'x', 'y']], color_sets['teal-red'], geo_df_fff, name='Wijknaam', 
+        fig = create_bivariate_map(df_supply_demand_CLUSTERED_bivariate[['WKC', 'Wijknaam', 'x', 'y']], color_sets['teal-red'], geo_df, name='Wijknaam', 
                                ids='WKC', conf=conf)
         
     else:
