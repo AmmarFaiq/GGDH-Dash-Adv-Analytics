@@ -583,7 +583,7 @@ def update_graph_map(
                                                        '4':'4 - Lower Care Cost - Higher SES - Older Population - Lower Minority'})
 
 
-    fig = px.choropleth_mapbox(dff, geojson=geo_df_fff, color="Cluster Name",
+    fig = px.choropleth_mapbox(dff, geojson=geo_df, color="Cluster Name",
                                     locations="WKC", featureidkey="properties.WKC", opacity = 0.4,
                                     center={"lat": 52.1, "lon": 4.24},
                                     mapbox_style="carto-positron", zoom=9.5,hover_name="Wijknaam", 
@@ -1235,12 +1235,12 @@ def update_graph_map(
 
 
     if bivariate_style == 0:
-        fig = create_bivariate_map(df_supply_demand_CLUSTERED_bivariate[['WKC', 'Wijknaam', 'x', 'y']], color_sets['teal-red'], geo_df_fff, name='Wijknaam', 
+        fig = create_bivariate_map(df_supply_demand_CLUSTERED_bivariate[['WKC', 'Wijknaam', 'x', 'y']], color_sets['teal-red'], geo_df, name='Wijknaam', 
                                ids='WKC', conf=conf)
         
     else:
         df_supply_demand_CLUSTERED_bivariate = df_supply_demand_CLUSTERED_bivariate.sort_values(['Supply Demand Cluster'], ascending=[True])
-        fig = px.choropleth_mapbox(df_supply_demand_CLUSTERED_bivariate, geojson=geo_df_fff, color="Supply Demand Cluster",
+        fig = px.choropleth_mapbox(df_supply_demand_CLUSTERED_bivariate, geojson=geo_df, color="Supply Demand Cluster",
                                         locations="WKC", featureidkey="properties.WKC", opacity = 0.4,
                                         center={"lat": 52.1, "lon": 4.24},
                                         mapbox_style="carto-positron", zoom=9.5, hover_name="Wijknaam", 
