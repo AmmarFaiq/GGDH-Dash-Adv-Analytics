@@ -1,0 +1,731 @@
+WKC,GMN,Wijknaam,YEAR,Cluster_Reworked
+WK051801,'s-Gravenhage, Wijk 01 Oostduinen,2011,3
+WK051802,'s-Gravenhage, Wijk 02 Belgisch Park,2011,3
+WK051805,'s-Gravenhage, Wijk 05 Archipelbuurt,2011,3
+WK051809,'s-Gravenhage, Wijk 09 Geuzen- en Statenkwartier,2011,3
+WK051811,'s-Gravenhage, Wijk 11 Duinoord,2011,3
+WK051819,'s-Gravenhage, Wijk 19 Vruchtenbuurt,2011,3
+WK051820,'s-Gravenhage, Wijk 20 Valkenboskwartier,2011,3
+WK051821,'s-Gravenhage, Wijk 21 Regentessekwartier,2011,3
+WK051822,'s-Gravenhage, Wijk 22 Zeeheldenkwartier,2011,3
+WK051823,'s-Gravenhage, Wijk 23 Willemspark,2011,3
+WK051826,'s-Gravenhage, Wijk 26 Bezuidenhout,2011,3
+WK051828,'s-Gravenhage, Wijk 28 Centrum,2011,3
+WK051839,'s-Gravenhage, Wijk 39 Binckhorst,2011,3
+WK051840,'s-Gravenhage, Wijk 40 Wateringse Veld,2011,3
+WK051842,'s-Gravenhage, Wijk 42 Ypenburg,2011,3
+WK051844,'s-Gravenhage, Wijk 44 Leidschenveen,2011,3
+WK060301,Rijswijk, Wijk 01,2011,3
+WK051803,'s-Gravenhage, Wijk 03 Westbroekpark en Duttendel,2011,2
+WK051804,'s-Gravenhage, Wijk 04 Benoordenhout,2011,2
+WK051806,'s-Gravenhage, Wijk 06 Van Stolkpark en Scheveningse Bosjes,2011,2
+WK051807,'s-Gravenhage, Wijk 07 Scheveningen,2011,2
+WK051808,'s-Gravenhage, Wijk 08 Duindorp,2011,2
+WK051812,'s-Gravenhage, Wijk 12 Bomen- en Bloemenbuurt,2011,2
+WK051814,'s-Gravenhage, Wijk 14 Bohemen en Meer en Bos,2011,2
+WK051815,'s-Gravenhage, Wijk 15 Kijkduin en Ockenburgh,2011,2
+WK051816,'s-Gravenhage, Wijk 16 Kraayenstein en de Uithof,2011,2
+WK051817,'s-Gravenhage, Wijk 17 Loosduinen,2011,2
+WK051818,'s-Gravenhage, Wijk 18 Waldeck,2011,2
+WK051824,'s-Gravenhage, Wijk 24 Haagse Bos,2011,2
+WK051825,'s-Gravenhage, Wijk 25 Mariahoeve en Marlot,2011,2
+WK051832,'s-Gravenhage, Wijk 32 Leyenburg,2011,2
+WK060302,Rijswijk, Wijk 02,2011,2
+WK060303,Rijswijk, Wijk 03,2011,2
+WK060304,Rijswijk, Wijk 04,2011,2
+WK060305,Rijswijk, Wijk 05,2011,2
+WK060306,Rijswijk, Wijk 06,2011,2
+WK060307,Rijswijk, Wijk 07,2011,2
+WK062901,Wassenaar, Wijk 01 Noordoostelijk deel der gemeente,2011,2
+WK191600,Leidschendam-Voorburg, Wijk 00 Voorburg,2011,2
+WK191601,Leidschendam-Voorburg, Wijk 01 De Heuvel,2011,2
+WK191602,Leidschendam-Voorburg, Wijk 02 De Zijde,2011,2
+WK191603,Leidschendam-Voorburg, Wijk 03 Duivenvoorde,2011,2
+WK191605,Leidschendam-Voorburg, Wijk 05 't Lien,2011,2
+WK191606,Leidschendam-Voorburg, Wijk 06 Leidschendam-Zuid,2011,2
+WK191607,Leidschendam-Voorburg, Wijk 07 Damsigt en omgeving,2011,2
+WK191608,Leidschendam-Voorburg, Wijk 08 Damlaan,2011,2
+WK191609,Leidschendam-Voorburg, Wijk 09 De Rietvink,2011,2
+WK191612,Leidschendam-Voorburg, Wijk 12 Prinsenhof,2011,2
+WK191613,Leidschendam-Voorburg, Wijk 13 Raadhuiskwartier,2011,2
+WK191617,Leidschendam-Voorburg, Wijk 17 Veursestraatweg-Noord,2011,2
+WK051810,'s-Gravenhage, Wijk 10 Zorgvliet,2011,4
+WK051813,'s-Gravenhage, Wijk 13 Vogelwijk,2011,4
+WK051841,'s-Gravenhage, Wijk 41 Hoornwijk,2011,4
+WK051843,'s-Gravenhage, Wijk 43 Forepark,2011,4
+WK060308,Rijswijk, Wijk 08,2011,4
+WK060309,Rijswijk, Wijk 09,2011,4
+WK062900,Wassenaar, Wijk 00 Zuidwestelijk deel der gemeente,2011,4
+WK191610,Leidschendam-Voorburg, Wijk 10 Wilsveen,2011,4
+WK191611,Leidschendam-Voorburg, Wijk 11 Park Leeuwenbergh,2011,4
+WK191614,Leidschendam-Voorburg, Wijk 14 Stompwijk,2011,4
+WK191615,Leidschendam-Voorburg, Wijk 15 Verzetsheldenwijk,2011,4
+WK191616,Leidschendam-Voorburg, Wijk 16 Zeeheldenwijk,2011,4
+WK191618,Leidschendam-Voorburg, Wijk 18 Landelijk gebied,2011,4
+WK051827,'s-Gravenhage, Wijk 27 Stationsbuurt,2011,1
+WK051829,'s-Gravenhage, Wijk 29 Schildersbuurt,2011,1
+WK051830,'s-Gravenhage, Wijk 30 Transvaalkwartier,2011,1
+WK051831,'s-Gravenhage, Wijk 31 Rustenburg en Oostbroek,2011,1
+WK051833,'s-Gravenhage, Wijk 33 Bouwlust en Vrederust,2011,1
+WK051834,'s-Gravenhage, Wijk 34 Morgenstond,2011,1
+WK051835,'s-Gravenhage, Wijk 35 Zuiderpark,2011,1
+WK051836,'s-Gravenhage, Wijk 36 Moerwijk,2011,1
+WK051837,'s-Gravenhage, Wijk 37 Groente- en Fruitmarkt,2011,1
+WK051838,'s-Gravenhage, Wijk 38 Laakkwartier en Spoorwijk,2011,1
+WK051801,'s-Gravenhage, Wijk 01 Oostduinen,2012,4
+WK051802,'s-Gravenhage, Wijk 02 Belgisch Park,2012,4
+WK051804,'s-Gravenhage, Wijk 04 Benoordenhout,2012,4
+WK051805,'s-Gravenhage, Wijk 05 Archipelbuurt,2012,4
+WK051806,'s-Gravenhage, Wijk 06 Van Stolkpark en Scheveningse Bosjes,2012,4
+WK051809,'s-Gravenhage, Wijk 09 Geuzen- en Statenkwartier,2012,4
+WK051810,'s-Gravenhage, Wijk 10 Zorgvliet,2012,4
+WK051812,'s-Gravenhage, Wijk 12 Bomen- en Bloemenbuurt,2012,4
+WK051813,'s-Gravenhage, Wijk 13 Vogelwijk,2012,4
+WK051819,'s-Gravenhage, Wijk 19 Vruchtenbuurt,2012,4
+WK051823,'s-Gravenhage, Wijk 23 Willemspark,2012,4
+WK051841,'s-Gravenhage, Wijk 41 Hoornwijk,2012,4
+WK051843,'s-Gravenhage, Wijk 43 Forepark,2012,4
+WK060301,Rijswijk, Wijk 01,2012,4
+WK060308,Rijswijk, Wijk 08,2012,4
+WK060309,Rijswijk, Wijk 09,2012,4
+WK062900,Wassenaar, Wijk 00 Zuidwestelijk deel der gemeente,2012,4
+WK062901,Wassenaar, Wijk 01 Noordoostelijk deel der gemeente,2012,4
+WK191610,Leidschendam-Voorburg, Wijk 10 Wilsveen,2012,4
+WK191611,Leidschendam-Voorburg, Wijk 11 Park Leeuwenbergh,2012,4
+WK191614,Leidschendam-Voorburg, Wijk 14 Stompwijk,2012,4
+WK191615,Leidschendam-Voorburg, Wijk 15 Verzetsheldenwijk,2012,4
+WK191616,Leidschendam-Voorburg, Wijk 16 Zeeheldenwijk,2012,4
+WK191617,Leidschendam-Voorburg, Wijk 17 Veursestraatweg-Noord,2012,4
+WK191618,Leidschendam-Voorburg, Wijk 18 Landelijk gebied,2012,4
+WK051803,'s-Gravenhage, Wijk 03 Westbroekpark en Duttendel,2012,2
+WK051807,'s-Gravenhage, Wijk 07 Scheveningen,2012,2
+WK051808,'s-Gravenhage, Wijk 08 Duindorp,2012,2
+WK051814,'s-Gravenhage, Wijk 14 Bohemen en Meer en Bos,2012,2
+WK051815,'s-Gravenhage, Wijk 15 Kijkduin en Ockenburgh,2012,2
+WK051816,'s-Gravenhage, Wijk 16 Kraayenstein en de Uithof,2012,2
+WK051817,'s-Gravenhage, Wijk 17 Loosduinen,2012,2
+WK051818,'s-Gravenhage, Wijk 18 Waldeck,2012,2
+WK051824,'s-Gravenhage, Wijk 24 Haagse Bos,2012,2
+WK051825,'s-Gravenhage, Wijk 25 Mariahoeve en Marlot,2012,2
+WK051832,'s-Gravenhage, Wijk 32 Leyenburg,2012,2
+WK060302,Rijswijk, Wijk 02,2012,2
+WK060303,Rijswijk, Wijk 03,2012,2
+WK060304,Rijswijk, Wijk 04,2012,2
+WK060305,Rijswijk, Wijk 05,2012,2
+WK060306,Rijswijk, Wijk 06,2012,2
+WK060307,Rijswijk, Wijk 07,2012,2
+WK191600,Leidschendam-Voorburg, Wijk 00 Voorburg,2012,2
+WK191601,Leidschendam-Voorburg, Wijk 01 De Heuvel,2012,2
+WK191602,Leidschendam-Voorburg, Wijk 02 De Zijde,2012,2
+WK191603,Leidschendam-Voorburg, Wijk 03 Duivenvoorde,2012,2
+WK191605,Leidschendam-Voorburg, Wijk 05 't Lien,2012,2
+WK191606,Leidschendam-Voorburg, Wijk 06 Leidschendam-Zuid,2012,2
+WK191607,Leidschendam-Voorburg, Wijk 07 Damsigt en omgeving,2012,2
+WK191608,Leidschendam-Voorburg, Wijk 08 Damlaan,2012,2
+WK191609,Leidschendam-Voorburg, Wijk 09 De Rietvink,2012,2
+WK191612,Leidschendam-Voorburg, Wijk 12 Prinsenhof,2012,2
+WK191613,Leidschendam-Voorburg, Wijk 13 Raadhuiskwartier,2012,2
+WK051811,'s-Gravenhage, Wijk 11 Duinoord,2012,3
+WK051820,'s-Gravenhage, Wijk 20 Valkenboskwartier,2012,3
+WK051821,'s-Gravenhage, Wijk 21 Regentessekwartier,2012,3
+WK051822,'s-Gravenhage, Wijk 22 Zeeheldenkwartier,2012,3
+WK051826,'s-Gravenhage, Wijk 26 Bezuidenhout,2012,3
+WK051827,'s-Gravenhage, Wijk 27 Stationsbuurt,2012,3
+WK051828,'s-Gravenhage, Wijk 28 Centrum,2012,3
+WK051831,'s-Gravenhage, Wijk 31 Rustenburg en Oostbroek,2012,3
+WK051839,'s-Gravenhage, Wijk 39 Binckhorst,2012,3
+WK051840,'s-Gravenhage, Wijk 40 Wateringse Veld,2012,3
+WK051842,'s-Gravenhage, Wijk 42 Ypenburg,2012,3
+WK051844,'s-Gravenhage, Wijk 44 Leidschenveen,2012,3
+WK051829,'s-Gravenhage, Wijk 29 Schildersbuurt,2012,1
+WK051830,'s-Gravenhage, Wijk 30 Transvaalkwartier,2012,1
+WK051833,'s-Gravenhage, Wijk 33 Bouwlust en Vrederust,2012,1
+WK051834,'s-Gravenhage, Wijk 34 Morgenstond,2012,1
+WK051835,'s-Gravenhage, Wijk 35 Zuiderpark,2012,1
+WK051836,'s-Gravenhage, Wijk 36 Moerwijk,2012,1
+WK051837,'s-Gravenhage, Wijk 37 Groente- en Fruitmarkt,2012,1
+WK051838,'s-Gravenhage, Wijk 38 Laakkwartier en Spoorwijk,2012,1
+WK051801,'s-Gravenhage, Wijk 01 Oostduinen,2013,4
+WK051802,'s-Gravenhage, Wijk 02 Belgisch Park,2013,4
+WK051804,'s-Gravenhage, Wijk 04 Benoordenhout,2013,4
+WK051805,'s-Gravenhage, Wijk 05 Archipelbuurt,2013,4
+WK051809,'s-Gravenhage, Wijk 09 Geuzen- en Statenkwartier,2013,4
+WK051810,'s-Gravenhage, Wijk 10 Zorgvliet,2013,4
+WK051811,'s-Gravenhage, Wijk 11 Duinoord,2013,4
+WK051812,'s-Gravenhage, Wijk 12 Bomen- en Bloemenbuurt,2013,4
+WK051813,'s-Gravenhage, Wijk 13 Vogelwijk,2013,4
+WK051819,'s-Gravenhage, Wijk 19 Vruchtenbuurt,2013,4
+WK051823,'s-Gravenhage, Wijk 23 Willemspark,2013,4
+WK051841,'s-Gravenhage, Wijk 41 Hoornwijk,2013,4
+WK051843,'s-Gravenhage, Wijk 43 Forepark,2013,4
+WK060301,Rijswijk, Wijk 01,2013,4
+WK060308,Rijswijk, Wijk 08,2013,4
+WK060309,Rijswijk, Wijk 09,2013,4
+WK062900,Wassenaar, Wijk 00 Zuidwestelijk deel der gemeente,2013,4
+WK062901,Wassenaar, Wijk 01 Noordoostelijk deel der gemeente,2013,4
+WK191600,Leidschendam-Voorburg, Wijk 00 Voorburg,2013,4
+WK191605,Leidschendam-Voorburg, Wijk 05 't Lien,2013,4
+WK191610,Leidschendam-Voorburg, Wijk 10 Wilsveen,2013,4
+WK191611,Leidschendam-Voorburg, Wijk 11 Park Leeuwenbergh,2013,4
+WK191614,Leidschendam-Voorburg, Wijk 14 Stompwijk,2013,4
+WK191615,Leidschendam-Voorburg, Wijk 15 Verzetsheldenwijk,2013,4
+WK191616,Leidschendam-Voorburg, Wijk 16 Zeeheldenwijk,2013,4
+WK191617,Leidschendam-Voorburg, Wijk 17 Veursestraatweg-Noord,2013,4
+WK191618,Leidschendam-Voorburg, Wijk 18 Landelijk gebied,2013,4
+WK051803,'s-Gravenhage, Wijk 03 Westbroekpark en Duttendel,2013,2
+WK051806,'s-Gravenhage, Wijk 06 Van Stolkpark en Scheveningse Bosjes,2013,2
+WK051807,'s-Gravenhage, Wijk 07 Scheveningen,2013,2
+WK051808,'s-Gravenhage, Wijk 08 Duindorp,2013,2
+WK051814,'s-Gravenhage, Wijk 14 Bohemen en Meer en Bos,2013,2
+WK051815,'s-Gravenhage, Wijk 15 Kijkduin en Ockenburgh,2013,2
+WK051816,'s-Gravenhage, Wijk 16 Kraayenstein en de Uithof,2013,2
+WK051817,'s-Gravenhage, Wijk 17 Loosduinen,2013,2
+WK051818,'s-Gravenhage, Wijk 18 Waldeck,2013,2
+WK051824,'s-Gravenhage, Wijk 24 Haagse Bos,2013,2
+WK051825,'s-Gravenhage, Wijk 25 Mariahoeve en Marlot,2013,2
+WK051832,'s-Gravenhage, Wijk 32 Leyenburg,2013,2
+WK060302,Rijswijk, Wijk 02,2013,2
+WK060303,Rijswijk, Wijk 03,2013,2
+WK060304,Rijswijk, Wijk 04,2013,2
+WK060305,Rijswijk, Wijk 05,2013,2
+WK060306,Rijswijk, Wijk 06,2013,2
+WK060307,Rijswijk, Wijk 07,2013,2
+WK191601,Leidschendam-Voorburg, Wijk 01 De Heuvel,2013,2
+WK191602,Leidschendam-Voorburg, Wijk 02 De Zijde,2013,2
+WK191603,Leidschendam-Voorburg, Wijk 03 Duivenvoorde,2013,2
+WK191606,Leidschendam-Voorburg, Wijk 06 Leidschendam-Zuid,2013,2
+WK191607,Leidschendam-Voorburg, Wijk 07 Damsigt en omgeving,2013,2
+WK191608,Leidschendam-Voorburg, Wijk 08 Damlaan,2013,2
+WK191609,Leidschendam-Voorburg, Wijk 09 De Rietvink,2013,2
+WK191612,Leidschendam-Voorburg, Wijk 12 Prinsenhof,2013,2
+WK191613,Leidschendam-Voorburg, Wijk 13 Raadhuiskwartier,2013,2
+WK051820,'s-Gravenhage, Wijk 20 Valkenboskwartier,2013,3
+WK051821,'s-Gravenhage, Wijk 21 Regentessekwartier,2013,3
+WK051822,'s-Gravenhage, Wijk 22 Zeeheldenkwartier,2013,3
+WK051826,'s-Gravenhage, Wijk 26 Bezuidenhout,2013,3
+WK051827,'s-Gravenhage, Wijk 27 Stationsbuurt,2013,3
+WK051828,'s-Gravenhage, Wijk 28 Centrum,2013,3
+WK051831,'s-Gravenhage, Wijk 31 Rustenburg en Oostbroek,2013,3
+WK051839,'s-Gravenhage, Wijk 39 Binckhorst,2013,3
+WK051840,'s-Gravenhage, Wijk 40 Wateringse Veld,2013,3
+WK051842,'s-Gravenhage, Wijk 42 Ypenburg,2013,3
+WK051844,'s-Gravenhage, Wijk 44 Leidschenveen,2013,3
+WK051829,'s-Gravenhage, Wijk 29 Schildersbuurt,2013,1
+WK051830,'s-Gravenhage, Wijk 30 Transvaalkwartier,2013,1
+WK051833,'s-Gravenhage, Wijk 33 Bouwlust en Vrederust,2013,1
+WK051834,'s-Gravenhage, Wijk 34 Morgenstond,2013,1
+WK051835,'s-Gravenhage, Wijk 35 Zuiderpark,2013,1
+WK051836,'s-Gravenhage, Wijk 36 Moerwijk,2013,1
+WK051837,'s-Gravenhage, Wijk 37 Groente- en Fruitmarkt,2013,1
+WK051838,'s-Gravenhage, Wijk 38 Laakkwartier en Spoorwijk,2013,1
+WK051801,'s-Gravenhage, Wijk 01 Oostduinen,2014,4
+WK051802,'s-Gravenhage, Wijk 02 Belgisch Park,2014,4
+WK051804,'s-Gravenhage, Wijk 04 Benoordenhout,2014,4
+WK051805,'s-Gravenhage, Wijk 05 Archipelbuurt,2014,4
+WK051806,'s-Gravenhage, Wijk 06 Van Stolkpark en Scheveningse Bosjes,2014,4
+WK051809,'s-Gravenhage, Wijk 09 Geuzen- en Statenkwartier,2014,4
+WK051810,'s-Gravenhage, Wijk 10 Zorgvliet,2014,4
+WK051812,'s-Gravenhage, Wijk 12 Bomen- en Bloemenbuurt,2014,4
+WK051813,'s-Gravenhage, Wijk 13 Vogelwijk,2014,4
+WK051819,'s-Gravenhage, Wijk 19 Vruchtenbuurt,2014,4
+WK051823,'s-Gravenhage, Wijk 23 Willemspark,2014,4
+WK051841,'s-Gravenhage, Wijk 41 Hoornwijk,2014,4
+WK051843,'s-Gravenhage, Wijk 43 Forepark,2014,4
+WK060301,Rijswijk, Wijk 01,2014,4
+WK060308,Rijswijk, Wijk 08,2014,4
+WK060309,Rijswijk, Wijk 09,2014,4
+WK062900,Wassenaar, Wijk 00 Zuidwestelijk deel der gemeente,2014,4
+WK191610,Leidschendam-Voorburg, Wijk 10 Wilsveen,2014,4
+WK191611,Leidschendam-Voorburg, Wijk 11 Park Leeuwenbergh,2014,4
+WK191614,Leidschendam-Voorburg, Wijk 14 Stompwijk,2014,4
+WK191615,Leidschendam-Voorburg, Wijk 15 Verzetsheldenwijk,2014,4
+WK191616,Leidschendam-Voorburg, Wijk 16 Zeeheldenwijk,2014,4
+WK191617,Leidschendam-Voorburg, Wijk 17 Veursestraatweg-Noord,2014,4
+WK191618,Leidschendam-Voorburg, Wijk 18 Landelijk gebied,2014,4
+WK051803,'s-Gravenhage, Wijk 03 Westbroekpark en Duttendel,2014,2
+WK051807,'s-Gravenhage, Wijk 07 Scheveningen,2014,2
+WK051808,'s-Gravenhage, Wijk 08 Duindorp,2014,2
+WK051814,'s-Gravenhage, Wijk 14 Bohemen en Meer en Bos,2014,2
+WK051815,'s-Gravenhage, Wijk 15 Kijkduin en Ockenburgh,2014,2
+WK051816,'s-Gravenhage, Wijk 16 Kraayenstein en de Uithof,2014,2
+WK051817,'s-Gravenhage, Wijk 17 Loosduinen,2014,2
+WK051818,'s-Gravenhage, Wijk 18 Waldeck,2014,2
+WK051824,'s-Gravenhage, Wijk 24 Haagse Bos,2014,2
+WK051825,'s-Gravenhage, Wijk 25 Mariahoeve en Marlot,2014,2
+WK051832,'s-Gravenhage, Wijk 32 Leyenburg,2014,2
+WK060302,Rijswijk, Wijk 02,2014,2
+WK060303,Rijswijk, Wijk 03,2014,2
+WK060304,Rijswijk, Wijk 04,2014,2
+WK060305,Rijswijk, Wijk 05,2014,2
+WK060306,Rijswijk, Wijk 06,2014,2
+WK060307,Rijswijk, Wijk 07,2014,2
+WK062901,Wassenaar, Wijk 01 Noordoostelijk deel der gemeente,2014,2
+WK191600,Leidschendam-Voorburg, Wijk 00 Voorburg,2014,2
+WK191601,Leidschendam-Voorburg, Wijk 01 De Heuvel,2014,2
+WK191602,Leidschendam-Voorburg, Wijk 02 De Zijde,2014,2
+WK191603,Leidschendam-Voorburg, Wijk 03 Duivenvoorde,2014,2
+WK191605,Leidschendam-Voorburg, Wijk 05 't Lien,2014,2
+WK191606,Leidschendam-Voorburg, Wijk 06 Leidschendam-Zuid,2014,2
+WK191607,Leidschendam-Voorburg, Wijk 07 Damsigt en omgeving,2014,2
+WK191608,Leidschendam-Voorburg, Wijk 08 Damlaan,2014,2
+WK191609,Leidschendam-Voorburg, Wijk 09 De Rietvink,2014,2
+WK191612,Leidschendam-Voorburg, Wijk 12 Prinsenhof,2014,2
+WK191613,Leidschendam-Voorburg, Wijk 13 Raadhuiskwartier,2014,2
+WK051811,'s-Gravenhage, Wijk 11 Duinoord,2014,3
+WK051820,'s-Gravenhage, Wijk 20 Valkenboskwartier,2014,3
+WK051821,'s-Gravenhage, Wijk 21 Regentessekwartier,2014,3
+WK051822,'s-Gravenhage, Wijk 22 Zeeheldenkwartier,2014,3
+WK051826,'s-Gravenhage, Wijk 26 Bezuidenhout,2014,3
+WK051827,'s-Gravenhage, Wijk 27 Stationsbuurt,2014,3
+WK051828,'s-Gravenhage, Wijk 28 Centrum,2014,3
+WK051831,'s-Gravenhage, Wijk 31 Rustenburg en Oostbroek,2014,3
+WK051839,'s-Gravenhage, Wijk 39 Binckhorst,2014,3
+WK051840,'s-Gravenhage, Wijk 40 Wateringse Veld,2014,3
+WK051842,'s-Gravenhage, Wijk 42 Ypenburg,2014,3
+WK051844,'s-Gravenhage, Wijk 44 Leidschenveen,2014,3
+WK051829,'s-Gravenhage, Wijk 29 Schildersbuurt,2014,1
+WK051830,'s-Gravenhage, Wijk 30 Transvaalkwartier,2014,1
+WK051833,'s-Gravenhage, Wijk 33 Bouwlust en Vrederust,2014,1
+WK051834,'s-Gravenhage, Wijk 34 Morgenstond,2014,1
+WK051835,'s-Gravenhage, Wijk 35 Zuiderpark,2014,1
+WK051836,'s-Gravenhage, Wijk 36 Moerwijk,2014,1
+WK051837,'s-Gravenhage, Wijk 37 Groente- en Fruitmarkt,2014,1
+WK051838,'s-Gravenhage, Wijk 38 Laakkwartier en Spoorwijk,2014,1
+WK051801,'s-Gravenhage, Wijk 01 Oostduinen,2015,4
+WK051802,'s-Gravenhage, Wijk 02 Belgisch Park,2015,4
+WK051804,'s-Gravenhage, Wijk 04 Benoordenhout,2015,4
+WK051805,'s-Gravenhage, Wijk 05 Archipelbuurt,2015,4
+WK051809,'s-Gravenhage, Wijk 09 Geuzen- en Statenkwartier,2015,4
+WK051810,'s-Gravenhage, Wijk 10 Zorgvliet,2015,4
+WK051811,'s-Gravenhage, Wijk 11 Duinoord,2015,4
+WK051812,'s-Gravenhage, Wijk 12 Bomen- en Bloemenbuurt,2015,4
+WK051813,'s-Gravenhage, Wijk 13 Vogelwijk,2015,4
+WK051819,'s-Gravenhage, Wijk 19 Vruchtenbuurt,2015,4
+WK051823,'s-Gravenhage, Wijk 23 Willemspark,2015,4
+WK051841,'s-Gravenhage, Wijk 41 Hoornwijk,2015,4
+WK051843,'s-Gravenhage, Wijk 43 Forepark,2015,4
+WK060301,Rijswijk, Wijk 01,2015,4
+WK060308,Rijswijk, Wijk 08,2015,4
+WK060309,Rijswijk, Wijk 09,2015,4
+WK191610,Leidschendam-Voorburg, Wijk 10 Wilsveen,2015,4
+WK191611,Leidschendam-Voorburg, Wijk 11 Park Leeuwenbergh,2015,4
+WK191614,Leidschendam-Voorburg, Wijk 14 Stompwijk,2015,4
+WK191615,Leidschendam-Voorburg, Wijk 15 Verzetsheldenwijk,2015,4
+WK191616,Leidschendam-Voorburg, Wijk 16 Zeeheldenwijk,2015,4
+WK191617,Leidschendam-Voorburg, Wijk 17 Veursestraatweg-Noord,2015,4
+WK191618,Leidschendam-Voorburg, Wijk 18 Landelijk gebied,2015,4
+WK051803,'s-Gravenhage, Wijk 03 Westbroekpark en Duttendel,2015,2
+WK051806,'s-Gravenhage, Wijk 06 Van Stolkpark en Scheveningse Bosjes,2015,2
+WK051807,'s-Gravenhage, Wijk 07 Scheveningen,2015,2
+WK051808,'s-Gravenhage, Wijk 08 Duindorp,2015,2
+WK051814,'s-Gravenhage, Wijk 14 Bohemen en Meer en Bos,2015,2
+WK051815,'s-Gravenhage, Wijk 15 Kijkduin en Ockenburgh,2015,2
+WK051816,'s-Gravenhage, Wijk 16 Kraayenstein en de Uithof,2015,2
+WK051817,'s-Gravenhage, Wijk 17 Loosduinen,2015,2
+WK051818,'s-Gravenhage, Wijk 18 Waldeck,2015,2
+WK051824,'s-Gravenhage, Wijk 24 Haagse Bos,2015,2
+WK051825,'s-Gravenhage, Wijk 25 Mariahoeve en Marlot,2015,2
+WK051832,'s-Gravenhage, Wijk 32 Leyenburg,2015,2
+WK060302,Rijswijk, Wijk 02,2015,2
+WK060303,Rijswijk, Wijk 03,2015,2
+WK060304,Rijswijk, Wijk 04,2015,2
+WK060305,Rijswijk, Wijk 05,2015,2
+WK060306,Rijswijk, Wijk 06,2015,2
+WK060307,Rijswijk, Wijk 07,2015,2
+WK062900,Wassenaar, Wijk 00 Zuidwestelijk deel der gemeente,2015,2
+WK062901,Wassenaar, Wijk 01 Noordoostelijk deel der gemeente,2015,2
+WK191600,Leidschendam-Voorburg, Wijk 00 Voorburg,2015,2
+WK191601,Leidschendam-Voorburg, Wijk 01 De Heuvel,2015,2
+WK191602,Leidschendam-Voorburg, Wijk 02 De Zijde,2015,2
+WK191603,Leidschendam-Voorburg, Wijk 03 Duivenvoorde,2015,2
+WK191605,Leidschendam-Voorburg, Wijk 05 't Lien,2015,2
+WK191606,Leidschendam-Voorburg, Wijk 06 Leidschendam-Zuid,2015,2
+WK191607,Leidschendam-Voorburg, Wijk 07 Damsigt en omgeving,2015,2
+WK191608,Leidschendam-Voorburg, Wijk 08 Damlaan,2015,2
+WK191609,Leidschendam-Voorburg, Wijk 09 De Rietvink,2015,2
+WK191612,Leidschendam-Voorburg, Wijk 12 Prinsenhof,2015,2
+WK191613,Leidschendam-Voorburg, Wijk 13 Raadhuiskwartier,2015,2
+WK051820,'s-Gravenhage, Wijk 20 Valkenboskwartier,2015,3
+WK051821,'s-Gravenhage, Wijk 21 Regentessekwartier,2015,3
+WK051822,'s-Gravenhage, Wijk 22 Zeeheldenkwartier,2015,3
+WK051826,'s-Gravenhage, Wijk 26 Bezuidenhout,2015,3
+WK051827,'s-Gravenhage, Wijk 27 Stationsbuurt,2015,3
+WK051828,'s-Gravenhage, Wijk 28 Centrum,2015,3
+WK051831,'s-Gravenhage, Wijk 31 Rustenburg en Oostbroek,2015,3
+WK051838,'s-Gravenhage, Wijk 38 Laakkwartier en Spoorwijk,2015,3
+WK051839,'s-Gravenhage, Wijk 39 Binckhorst,2015,3
+WK051840,'s-Gravenhage, Wijk 40 Wateringse Veld,2015,3
+WK051842,'s-Gravenhage, Wijk 42 Ypenburg,2015,3
+WK051844,'s-Gravenhage, Wijk 44 Leidschenveen,2015,3
+WK051829,'s-Gravenhage, Wijk 29 Schildersbuurt,2015,1
+WK051830,'s-Gravenhage, Wijk 30 Transvaalkwartier,2015,1
+WK051833,'s-Gravenhage, Wijk 33 Bouwlust en Vrederust,2015,1
+WK051834,'s-Gravenhage, Wijk 34 Morgenstond,2015,1
+WK051835,'s-Gravenhage, Wijk 35 Zuiderpark,2015,1
+WK051836,'s-Gravenhage, Wijk 36 Moerwijk,2015,1
+WK051837,'s-Gravenhage, Wijk 37 Groente- en Fruitmarkt,2015,1
+WK051801,'s-Gravenhage, Wijk 01 Oostduinen,2016,3
+WK051802,'s-Gravenhage, Wijk 02 Belgisch Park,2016,3
+WK051805,'s-Gravenhage, Wijk 05 Archipelbuurt,2016,3
+WK051809,'s-Gravenhage, Wijk 09 Geuzen- en Statenkwartier,2016,3
+WK051811,'s-Gravenhage, Wijk 11 Duinoord,2016,3
+WK051812,'s-Gravenhage, Wijk 12 Bomen- en Bloemenbuurt,2016,3
+WK051819,'s-Gravenhage, Wijk 19 Vruchtenbuurt,2016,3
+WK051820,'s-Gravenhage, Wijk 20 Valkenboskwartier,2016,3
+WK051821,'s-Gravenhage, Wijk 21 Regentessekwartier,2016,3
+WK051822,'s-Gravenhage, Wijk 22 Zeeheldenkwartier,2016,3
+WK051823,'s-Gravenhage, Wijk 23 Willemspark,2016,3
+WK051826,'s-Gravenhage, Wijk 26 Bezuidenhout,2016,3
+WK051827,'s-Gravenhage, Wijk 27 Stationsbuurt,2016,3
+WK051828,'s-Gravenhage, Wijk 28 Centrum,2016,3
+WK051831,'s-Gravenhage, Wijk 31 Rustenburg en Oostbroek,2016,3
+WK051839,'s-Gravenhage, Wijk 39 Binckhorst,2016,3
+WK051840,'s-Gravenhage, Wijk 40 Wateringse Veld,2016,3
+WK051842,'s-Gravenhage, Wijk 42 Ypenburg,2016,3
+WK051844,'s-Gravenhage, Wijk 44 Leidschenveen,2016,3
+WK060301,Rijswijk, Wijk 01,2016,3
+WK060308,Rijswijk, Wijk 08,2016,3
+WK051803,'s-Gravenhage, Wijk 03 Westbroekpark en Duttendel,2016,2
+WK051804,'s-Gravenhage, Wijk 04 Benoordenhout,2016,2
+WK051806,'s-Gravenhage, Wijk 06 Van Stolkpark en Scheveningse Bosjes,2016,2
+WK051807,'s-Gravenhage, Wijk 07 Scheveningen,2016,2
+WK051808,'s-Gravenhage, Wijk 08 Duindorp,2016,2
+WK051814,'s-Gravenhage, Wijk 14 Bohemen en Meer en Bos,2016,2
+WK051815,'s-Gravenhage, Wijk 15 Kijkduin en Ockenburgh,2016,2
+WK051816,'s-Gravenhage, Wijk 16 Kraayenstein en de Uithof,2016,2
+WK051817,'s-Gravenhage, Wijk 17 Loosduinen,2016,2
+WK051818,'s-Gravenhage, Wijk 18 Waldeck,2016,2
+WK051824,'s-Gravenhage, Wijk 24 Haagse Bos,2016,2
+WK051825,'s-Gravenhage, Wijk 25 Mariahoeve en Marlot,2016,2
+WK051832,'s-Gravenhage, Wijk 32 Leyenburg,2016,2
+WK060302,Rijswijk, Wijk 02,2016,2
+WK060303,Rijswijk, Wijk 03,2016,2
+WK060304,Rijswijk, Wijk 04,2016,2
+WK060305,Rijswijk, Wijk 05,2016,2
+WK060306,Rijswijk, Wijk 06,2016,2
+WK060307,Rijswijk, Wijk 07,2016,2
+WK062900,Wassenaar, Wijk 00 Zuidwestelijk deel der gemeente,2016,2
+WK062901,Wassenaar, Wijk 01 Noordoostelijk deel der gemeente,2016,2
+WK191600,Leidschendam-Voorburg, Wijk 00 Voorburg,2016,2
+WK191601,Leidschendam-Voorburg, Wijk 01 De Heuvel,2016,2
+WK191602,Leidschendam-Voorburg, Wijk 02 De Zijde,2016,2
+WK191603,Leidschendam-Voorburg, Wijk 03 Duivenvoorde,2016,2
+WK191605,Leidschendam-Voorburg, Wijk 05 't Lien,2016,2
+WK191606,Leidschendam-Voorburg, Wijk 06 Leidschendam-Zuid,2016,2
+WK191607,Leidschendam-Voorburg, Wijk 07 Damsigt en omgeving,2016,2
+WK191608,Leidschendam-Voorburg, Wijk 08 Damlaan,2016,2
+WK191609,Leidschendam-Voorburg, Wijk 09 De Rietvink,2016,2
+WK191612,Leidschendam-Voorburg, Wijk 12 Prinsenhof,2016,2
+WK191613,Leidschendam-Voorburg, Wijk 13 Raadhuiskwartier,2016,2
+WK191617,Leidschendam-Voorburg, Wijk 17 Veursestraatweg-Noord,2016,2
+WK051810,'s-Gravenhage, Wijk 10 Zorgvliet,2016,4
+WK051813,'s-Gravenhage, Wijk 13 Vogelwijk,2016,4
+WK051841,'s-Gravenhage, Wijk 41 Hoornwijk,2016,4
+WK051843,'s-Gravenhage, Wijk 43 Forepark,2016,4
+WK060309,Rijswijk, Wijk 09,2016,4
+WK191610,Leidschendam-Voorburg, Wijk 10 Wilsveen,2016,4
+WK191611,Leidschendam-Voorburg, Wijk 11 Park Leeuwenbergh,2016,4
+WK191614,Leidschendam-Voorburg, Wijk 14 Stompwijk,2016,4
+WK191615,Leidschendam-Voorburg, Wijk 15 Verzetsheldenwijk,2016,4
+WK191616,Leidschendam-Voorburg, Wijk 16 Zeeheldenwijk,2016,4
+WK191618,Leidschendam-Voorburg, Wijk 18 Landelijk gebied,2016,4
+WK051829,'s-Gravenhage, Wijk 29 Schildersbuurt,2016,1
+WK051830,'s-Gravenhage, Wijk 30 Transvaalkwartier,2016,1
+WK051833,'s-Gravenhage, Wijk 33 Bouwlust en Vrederust,2016,1
+WK051834,'s-Gravenhage, Wijk 34 Morgenstond,2016,1
+WK051835,'s-Gravenhage, Wijk 35 Zuiderpark,2016,1
+WK051836,'s-Gravenhage, Wijk 36 Moerwijk,2016,1
+WK051837,'s-Gravenhage, Wijk 37 Groente- en Fruitmarkt,2016,1
+WK051838,'s-Gravenhage, Wijk 38 Laakkwartier en Spoorwijk,2016,1
+WK051801,'s-Gravenhage, Wijk 01 Oostduinen,2017,4
+WK051802,'s-Gravenhage, Wijk 02 Belgisch Park,2017,4
+WK051803,'s-Gravenhage, Wijk 03 Westbroekpark en Duttendel,2017,4
+WK051804,'s-Gravenhage, Wijk 04 Benoordenhout,2017,4
+WK051805,'s-Gravenhage, Wijk 05 Archipelbuurt,2017,4
+WK051806,'s-Gravenhage, Wijk 06 Van Stolkpark en Scheveningse Bosjes,2017,4
+WK051809,'s-Gravenhage, Wijk 09 Geuzen- en Statenkwartier,2017,4
+WK051810,'s-Gravenhage, Wijk 10 Zorgvliet,2017,4
+WK051812,'s-Gravenhage, Wijk 12 Bomen- en Bloemenbuurt,2017,4
+WK051813,'s-Gravenhage, Wijk 13 Vogelwijk,2017,4
+WK051819,'s-Gravenhage, Wijk 19 Vruchtenbuurt,2017,4
+WK051823,'s-Gravenhage, Wijk 23 Willemspark,2017,4
+WK051824,'s-Gravenhage, Wijk 24 Haagse Bos,2017,4
+WK051843,'s-Gravenhage, Wijk 43 Forepark,2017,4
+WK060301,Rijswijk, Wijk 01,2017,4
+WK060309,Rijswijk, Wijk 09,2017,4
+WK062900,Wassenaar, Wijk 00 Zuidwestelijk deel der gemeente,2017,4
+WK191610,Leidschendam-Voorburg, Wijk 10 Wilsveen,2017,4
+WK191611,Leidschendam-Voorburg, Wijk 11 Park Leeuwenbergh,2017,4
+WK191614,Leidschendam-Voorburg, Wijk 14 Stompwijk,2017,4
+WK191615,Leidschendam-Voorburg, Wijk 15 Verzetsheldenwijk,2017,4
+WK191616,Leidschendam-Voorburg, Wijk 16 Zeeheldenwijk,2017,4
+WK191617,Leidschendam-Voorburg, Wijk 17 Veursestraatweg-Noord,2017,4
+WK191618,Leidschendam-Voorburg, Wijk 18 Landelijk gebied,2017,4
+WK051807,'s-Gravenhage, Wijk 07 Scheveningen,2017,2
+WK051808,'s-Gravenhage, Wijk 08 Duindorp,2017,2
+WK051814,'s-Gravenhage, Wijk 14 Bohemen en Meer en Bos,2017,2
+WK051815,'s-Gravenhage, Wijk 15 Kijkduin en Ockenburgh,2017,2
+WK051816,'s-Gravenhage, Wijk 16 Kraayenstein en de Uithof,2017,2
+WK051817,'s-Gravenhage, Wijk 17 Loosduinen,2017,2
+WK051818,'s-Gravenhage, Wijk 18 Waldeck,2017,2
+WK051825,'s-Gravenhage, Wijk 25 Mariahoeve en Marlot,2017,2
+WK051832,'s-Gravenhage, Wijk 32 Leyenburg,2017,2
+WK060302,Rijswijk, Wijk 02,2017,2
+WK060303,Rijswijk, Wijk 03,2017,2
+WK060304,Rijswijk, Wijk 04,2017,2
+WK060305,Rijswijk, Wijk 05,2017,2
+WK060306,Rijswijk, Wijk 06,2017,2
+WK060307,Rijswijk, Wijk 07,2017,2
+WK062901,Wassenaar, Wijk 01 Noordoostelijk deel der gemeente,2017,2
+WK191600,Leidschendam-Voorburg, Wijk 00 Voorburg,2017,2
+WK191601,Leidschendam-Voorburg, Wijk 01 De Heuvel,2017,2
+WK191602,Leidschendam-Voorburg, Wijk 02 De Zijde,2017,2
+WK191603,Leidschendam-Voorburg, Wijk 03 Duivenvoorde,2017,2
+WK191605,Leidschendam-Voorburg, Wijk 05 't Lien,2017,2
+WK191606,Leidschendam-Voorburg, Wijk 06 Leidschendam-Zuid,2017,2
+WK191607,Leidschendam-Voorburg, Wijk 07 Damsigt en omgeving,2017,2
+WK191608,Leidschendam-Voorburg, Wijk 08 Damlaan,2017,2
+WK191609,Leidschendam-Voorburg, Wijk 09 De Rietvink,2017,2
+WK191612,Leidschendam-Voorburg, Wijk 12 Prinsenhof,2017,2
+WK191613,Leidschendam-Voorburg, Wijk 13 Raadhuiskwartier,2017,2
+WK051811,'s-Gravenhage, Wijk 11 Duinoord,2017,3
+WK051820,'s-Gravenhage, Wijk 20 Valkenboskwartier,2017,3
+WK051821,'s-Gravenhage, Wijk 21 Regentessekwartier,2017,3
+WK051822,'s-Gravenhage, Wijk 22 Zeeheldenkwartier,2017,3
+WK051826,'s-Gravenhage, Wijk 26 Bezuidenhout,2017,3
+WK051827,'s-Gravenhage, Wijk 27 Stationsbuurt,2017,3
+WK051828,'s-Gravenhage, Wijk 28 Centrum,2017,3
+WK051831,'s-Gravenhage, Wijk 31 Rustenburg en Oostbroek,2017,3
+WK051838,'s-Gravenhage, Wijk 38 Laakkwartier en Spoorwijk,2017,3
+WK051839,'s-Gravenhage, Wijk 39 Binckhorst,2017,3
+WK051840,'s-Gravenhage, Wijk 40 Wateringse Veld,2017,3
+WK051841,'s-Gravenhage, Wijk 41 Hoornwijk,2017,3
+WK051842,'s-Gravenhage, Wijk 42 Ypenburg,2017,3
+WK051844,'s-Gravenhage, Wijk 44 Leidschenveen,2017,3
+WK060308,Rijswijk, Wijk 08,2017,3
+WK051829,'s-Gravenhage, Wijk 29 Schildersbuurt,2017,1
+WK051830,'s-Gravenhage, Wijk 30 Transvaalkwartier,2017,1
+WK051833,'s-Gravenhage, Wijk 33 Bouwlust en Vrederust,2017,1
+WK051834,'s-Gravenhage, Wijk 34 Morgenstond,2017,1
+WK051835,'s-Gravenhage, Wijk 35 Zuiderpark,2017,1
+WK051836,'s-Gravenhage, Wijk 36 Moerwijk,2017,1
+WK051837,'s-Gravenhage, Wijk 37 Groente- en Fruitmarkt,2017,1
+WK051801,'s-Gravenhage, Wijk 01 Oostduinen,2018,4
+WK051802,'s-Gravenhage, Wijk 02 Belgisch Park,2018,4
+WK051804,'s-Gravenhage, Wijk 04 Benoordenhout,2018,4
+WK051805,'s-Gravenhage, Wijk 05 Archipelbuurt,2018,4
+WK051809,'s-Gravenhage, Wijk 09 Geuzen- en Statenkwartier,2018,4
+WK051810,'s-Gravenhage, Wijk 10 Zorgvliet,2018,4
+WK051811,'s-Gravenhage, Wijk 11 Duinoord,2018,4
+WK051812,'s-Gravenhage, Wijk 12 Bomen- en Bloemenbuurt,2018,4
+WK051813,'s-Gravenhage, Wijk 13 Vogelwijk,2018,4
+WK051819,'s-Gravenhage, Wijk 19 Vruchtenbuurt,2018,4
+WK051823,'s-Gravenhage, Wijk 23 Willemspark,2018,4
+WK051843,'s-Gravenhage, Wijk 43 Forepark,2018,4
+WK060301,Rijswijk, Wijk 01,2018,4
+WK060309,Rijswijk, Wijk 09,2018,4
+WK191610,Leidschendam-Voorburg, Wijk 10 Wilsveen,2018,4
+WK191611,Leidschendam-Voorburg, Wijk 11 Park Leeuwenbergh,2018,4
+WK191614,Leidschendam-Voorburg, Wijk 14 Stompwijk,2018,4
+WK191615,Leidschendam-Voorburg, Wijk 15 Verzetsheldenwijk,2018,4
+WK191616,Leidschendam-Voorburg, Wijk 16 Zeeheldenwijk,2018,4
+WK191618,Leidschendam-Voorburg, Wijk 18 Landelijk gebied,2018,4
+WK051803,'s-Gravenhage, Wijk 03 Westbroekpark en Duttendel,2018,2
+WK051806,'s-Gravenhage, Wijk 06 Van Stolkpark en Scheveningse Bosjes,2018,2
+WK051807,'s-Gravenhage, Wijk 07 Scheveningen,2018,2
+WK051808,'s-Gravenhage, Wijk 08 Duindorp,2018,2
+WK051814,'s-Gravenhage, Wijk 14 Bohemen en Meer en Bos,2018,2
+WK051815,'s-Gravenhage, Wijk 15 Kijkduin en Ockenburgh,2018,2
+WK051816,'s-Gravenhage, Wijk 16 Kraayenstein en de Uithof,2018,2
+WK051817,'s-Gravenhage, Wijk 17 Loosduinen,2018,2
+WK051818,'s-Gravenhage, Wijk 18 Waldeck,2018,2
+WK051824,'s-Gravenhage, Wijk 24 Haagse Bos,2018,2
+WK051825,'s-Gravenhage, Wijk 25 Mariahoeve en Marlot,2018,2
+WK051832,'s-Gravenhage, Wijk 32 Leyenburg,2018,2
+WK060302,Rijswijk, Wijk 02,2018,2
+WK060303,Rijswijk, Wijk 03,2018,2
+WK060304,Rijswijk, Wijk 04,2018,2
+WK060305,Rijswijk, Wijk 05,2018,2
+WK060306,Rijswijk, Wijk 06,2018,2
+WK060307,Rijswijk, Wijk 07,2018,2
+WK062900,Wassenaar, Wijk 00 Zuidwestelijk deel der gemeente,2018,2
+WK062901,Wassenaar, Wijk 01 Noordoostelijk deel der gemeente,2018,2
+WK191600,Leidschendam-Voorburg, Wijk 00 Voorburg,2018,2
+WK191601,Leidschendam-Voorburg, Wijk 01 De Heuvel,2018,2
+WK191602,Leidschendam-Voorburg, Wijk 02 De Zijde,2018,2
+WK191603,Leidschendam-Voorburg, Wijk 03 Duivenvoorde,2018,2
+WK191605,Leidschendam-Voorburg, Wijk 05 't Lien,2018,2
+WK191606,Leidschendam-Voorburg, Wijk 06 Leidschendam-Zuid,2018,2
+WK191607,Leidschendam-Voorburg, Wijk 07 Damsigt en omgeving,2018,2
+WK191608,Leidschendam-Voorburg, Wijk 08 Damlaan,2018,2
+WK191609,Leidschendam-Voorburg, Wijk 09 De Rietvink,2018,2
+WK191612,Leidschendam-Voorburg, Wijk 12 Prinsenhof,2018,2
+WK191613,Leidschendam-Voorburg, Wijk 13 Raadhuiskwartier,2018,2
+WK191617,Leidschendam-Voorburg, Wijk 17 Veursestraatweg-Noord,2018,2
+WK051820,'s-Gravenhage, Wijk 20 Valkenboskwartier,2018,3
+WK051821,'s-Gravenhage, Wijk 21 Regentessekwartier,2018,3
+WK051822,'s-Gravenhage, Wijk 22 Zeeheldenkwartier,2018,3
+WK051826,'s-Gravenhage, Wijk 26 Bezuidenhout,2018,3
+WK051827,'s-Gravenhage, Wijk 27 Stationsbuurt,2018,3
+WK051828,'s-Gravenhage, Wijk 28 Centrum,2018,3
+WK051831,'s-Gravenhage, Wijk 31 Rustenburg en Oostbroek,2018,3
+WK051838,'s-Gravenhage, Wijk 38 Laakkwartier en Spoorwijk,2018,3
+WK051839,'s-Gravenhage, Wijk 39 Binckhorst,2018,3
+WK051840,'s-Gravenhage, Wijk 40 Wateringse Veld,2018,3
+WK051841,'s-Gravenhage, Wijk 41 Hoornwijk,2018,3
+WK051842,'s-Gravenhage, Wijk 42 Ypenburg,2018,3
+WK051844,'s-Gravenhage, Wijk 44 Leidschenveen,2018,3
+WK060308,Rijswijk, Wijk 08,2018,3
+WK051829,'s-Gravenhage, Wijk 29 Schildersbuurt,2018,1
+WK051830,'s-Gravenhage, Wijk 30 Transvaalkwartier,2018,1
+WK051833,'s-Gravenhage, Wijk 33 Bouwlust en Vrederust,2018,1
+WK051834,'s-Gravenhage, Wijk 34 Morgenstond,2018,1
+WK051835,'s-Gravenhage, Wijk 35 Zuiderpark,2018,1
+WK051836,'s-Gravenhage, Wijk 36 Moerwijk,2018,1
+WK051837,'s-Gravenhage, Wijk 37 Groente- en Fruitmarkt,2018,1
+WK051801,'s-Gravenhage, Wijk 01 Oostduinen,2019,4
+WK051802,'s-Gravenhage, Wijk 02 Belgisch Park,2019,4
+WK051804,'s-Gravenhage, Wijk 04 Benoordenhout,2019,4
+WK051805,'s-Gravenhage, Wijk 05 Archipelbuurt,2019,4
+WK051806,'s-Gravenhage, Wijk 06 Van Stolkpark en Scheveningse Bosjes,2019,4
+WK051809,'s-Gravenhage, Wijk 09 Geuzen- en Statenkwartier,2019,4
+WK051810,'s-Gravenhage, Wijk 10 Zorgvliet,2019,4
+WK051811,'s-Gravenhage, Wijk 11 Duinoord,2019,4
+WK051812,'s-Gravenhage, Wijk 12 Bomen- en Bloemenbuurt,2019,4
+WK051813,'s-Gravenhage, Wijk 13 Vogelwijk,2019,4
+WK051816,'s-Gravenhage, Wijk 16 Kraayenstein en de Uithof,2019,4
+WK051819,'s-Gravenhage, Wijk 19 Vruchtenbuurt,2019,4
+WK051823,'s-Gravenhage, Wijk 23 Willemspark,2019,4
+WK051843,'s-Gravenhage, Wijk 43 Forepark,2019,4
+WK060301,Rijswijk, Wijk 01,2019,4
+WK060309,Rijswijk, Wijk 09,2019,4
+WK191610,Leidschendam-Voorburg, Wijk 10 Wilsveen,2019,4
+WK191611,Leidschendam-Voorburg, Wijk 11 Park Leeuwenbergh,2019,4
+WK191614,Leidschendam-Voorburg, Wijk 14 Stompwijk,2019,4
+WK191615,Leidschendam-Voorburg, Wijk 15 Verzetsheldenwijk,2019,4
+WK191616,Leidschendam-Voorburg, Wijk 16 Zeeheldenwijk,2019,4
+WK191618,Leidschendam-Voorburg, Wijk 18 Landelijk gebied,2019,4
+WK051803,'s-Gravenhage, Wijk 03 Westbroekpark en Duttendel,2019,2
+WK051807,'s-Gravenhage, Wijk 07 Scheveningen,2019,2
+WK051808,'s-Gravenhage, Wijk 08 Duindorp,2019,2
+WK051814,'s-Gravenhage, Wijk 14 Bohemen en Meer en Bos,2019,2
+WK051815,'s-Gravenhage, Wijk 15 Kijkduin en Ockenburgh,2019,2
+WK051817,'s-Gravenhage, Wijk 17 Loosduinen,2019,2
+WK051818,'s-Gravenhage, Wijk 18 Waldeck,2019,2
+WK051824,'s-Gravenhage, Wijk 24 Haagse Bos,2019,2
+WK051825,'s-Gravenhage, Wijk 25 Mariahoeve en Marlot,2019,2
+WK051832,'s-Gravenhage, Wijk 32 Leyenburg,2019,2
+WK060302,Rijswijk, Wijk 02,2019,2
+WK060303,Rijswijk, Wijk 03,2019,2
+WK060304,Rijswijk, Wijk 04,2019,2
+WK060305,Rijswijk, Wijk 05,2019,2
+WK060306,Rijswijk, Wijk 06,2019,2
+WK060307,Rijswijk, Wijk 07,2019,2
+WK062900,Wassenaar, Wijk 00 Zuidwestelijk deel der gemeente,2019,2
+WK062901,Wassenaar, Wijk 01 Noordoostelijk deel der gemeente,2019,2
+WK191600,Leidschendam-Voorburg, Wijk 00 Voorburg,2019,2
+WK191601,Leidschendam-Voorburg, Wijk 01 De Heuvel,2019,2
+WK191602,Leidschendam-Voorburg, Wijk 02 De Zijde,2019,2
+WK191603,Leidschendam-Voorburg, Wijk 03 Duivenvoorde,2019,2
+WK191605,Leidschendam-Voorburg, Wijk 05 't Lien,2019,2
+WK191606,Leidschendam-Voorburg, Wijk 06 Leidschendam-Zuid,2019,2
+WK191607,Leidschendam-Voorburg, Wijk 07 Damsigt en omgeving,2019,2
+WK191608,Leidschendam-Voorburg, Wijk 08 Damlaan,2019,2
+WK191609,Leidschendam-Voorburg, Wijk 09 De Rietvink,2019,2
+WK191612,Leidschendam-Voorburg, Wijk 12 Prinsenhof,2019,2
+WK191613,Leidschendam-Voorburg, Wijk 13 Raadhuiskwartier,2019,2
+WK191617,Leidschendam-Voorburg, Wijk 17 Veursestraatweg-Noord,2019,2
+WK051820,'s-Gravenhage, Wijk 20 Valkenboskwartier,2019,3
+WK051821,'s-Gravenhage, Wijk 21 Regentessekwartier,2019,3
+WK051822,'s-Gravenhage, Wijk 22 Zeeheldenkwartier,2019,3
+WK051826,'s-Gravenhage, Wijk 26 Bezuidenhout,2019,3
+WK051827,'s-Gravenhage, Wijk 27 Stationsbuurt,2019,3
+WK051828,'s-Gravenhage, Wijk 28 Centrum,2019,3
+WK051831,'s-Gravenhage, Wijk 31 Rustenburg en Oostbroek,2019,3
+WK051838,'s-Gravenhage, Wijk 38 Laakkwartier en Spoorwijk,2019,3
+WK051839,'s-Gravenhage, Wijk 39 Binckhorst,2019,3
+WK051840,'s-Gravenhage, Wijk 40 Wateringse Veld,2019,3
+WK051841,'s-Gravenhage, Wijk 41 Hoornwijk,2019,3
+WK051842,'s-Gravenhage, Wijk 42 Ypenburg,2019,3
+WK051844,'s-Gravenhage, Wijk 44 Leidschenveen,2019,3
+WK060308,Rijswijk, Wijk 08,2019,3
+WK051829,'s-Gravenhage, Wijk 29 Schildersbuurt,2019,1
+WK051830,'s-Gravenhage, Wijk 30 Transvaalkwartier,2019,1
+WK051833,'s-Gravenhage, Wijk 33 Bouwlust en Vrederust,2019,1
+WK051834,'s-Gravenhage, Wijk 34 Morgenstond,2019,1
+WK051835,'s-Gravenhage, Wijk 35 Zuiderpark,2019,1
+WK051836,'s-Gravenhage, Wijk 36 Moerwijk,2019,1
+WK051837,'s-Gravenhage, Wijk 37 Groente- en Fruitmarkt,2019,1
+WK051801,'s-Gravenhage, Wijk 01 Oostduinen,2020,4
+WK051802,'s-Gravenhage, Wijk 02 Belgisch Park,2020,4
+WK051804,'s-Gravenhage, Wijk 04 Benoordenhout,2020,4
+WK051805,'s-Gravenhage, Wijk 05 Archipelbuurt,2020,4
+WK051806,'s-Gravenhage, Wijk 06 Van Stolkpark en Scheveningse Bosjes,2020,4
+WK051809,'s-Gravenhage, Wijk 09 Geuzen- en Statenkwartier,2020,4
+WK051810,'s-Gravenhage, Wijk 10 Zorgvliet,2020,4
+WK051811,'s-Gravenhage, Wijk 11 Duinoord,2020,4
+WK051812,'s-Gravenhage, Wijk 12 Bomen- en Bloemenbuurt,2020,4
+WK051813,'s-Gravenhage, Wijk 13 Vogelwijk,2020,4
+WK051816,'s-Gravenhage, Wijk 16 Kraayenstein en de Uithof,2020,4
+WK051819,'s-Gravenhage, Wijk 19 Vruchtenbuurt,2020,4
+WK051823,'s-Gravenhage, Wijk 23 Willemspark,2020,4
+WK051824,'s-Gravenhage, Wijk 24 Haagse Bos,2020,4
+WK051843,'s-Gravenhage, Wijk 43 Forepark,2020,4
+WK060301,Rijswijk, Wijk 01,2020,4
+WK060309,Rijswijk, Wijk 09,2020,4
+WK062900,Wassenaar, Wijk 00 Zuidwestelijk deel der gemeente,2020,4
+WK191610,Leidschendam-Voorburg, Wijk 10 Wilsveen,2020,4
+WK191611,Leidschendam-Voorburg, Wijk 11 Park Leeuwenbergh,2020,4
+WK191614,Leidschendam-Voorburg, Wijk 14 Stompwijk,2020,4
+WK191615,Leidschendam-Voorburg, Wijk 15 Verzetsheldenwijk,2020,4
+WK191616,Leidschendam-Voorburg, Wijk 16 Zeeheldenwijk,2020,4
+WK191618,Leidschendam-Voorburg, Wijk 18 Landelijk gebied,2020,4
+WK051803,'s-Gravenhage, Wijk 03 Westbroekpark en Duttendel,2020,2
+WK051807,'s-Gravenhage, Wijk 07 Scheveningen,2020,2
+WK051808,'s-Gravenhage, Wijk 08 Duindorp,2020,2
+WK051814,'s-Gravenhage, Wijk 14 Bohemen en Meer en Bos,2020,2
+WK051815,'s-Gravenhage, Wijk 15 Kijkduin en Ockenburgh,2020,2
+WK051817,'s-Gravenhage, Wijk 17 Loosduinen,2020,2
+WK051818,'s-Gravenhage, Wijk 18 Waldeck,2020,2
+WK051825,'s-Gravenhage, Wijk 25 Mariahoeve en Marlot,2020,2
+WK051832,'s-Gravenhage, Wijk 32 Leyenburg,2020,2
+WK060302,Rijswijk, Wijk 02,2020,2
+WK060303,Rijswijk, Wijk 03,2020,2
+WK060304,Rijswijk, Wijk 04,2020,2
+WK060305,Rijswijk, Wijk 05,2020,2
+WK060306,Rijswijk, Wijk 06,2020,2
+WK060307,Rijswijk, Wijk 07,2020,2
+WK062901,Wassenaar, Wijk 01 Noordoostelijk deel der gemeente,2020,2
+WK191600,Leidschendam-Voorburg, Wijk 00 Voorburg,2020,2
+WK191601,Leidschendam-Voorburg, Wijk 01 De Heuvel,2020,2
+WK191602,Leidschendam-Voorburg, Wijk 02 De Zijde,2020,2
+WK191603,Leidschendam-Voorburg, Wijk 03 Duivenvoorde,2020,2
+WK191605,Leidschendam-Voorburg, Wijk 05 't Lien,2020,2
+WK191606,Leidschendam-Voorburg, Wijk 06 Leidschendam-Zuid,2020,2
+WK191607,Leidschendam-Voorburg, Wijk 07 Damsigt en omgeving,2020,2
+WK191608,Leidschendam-Voorburg, Wijk 08 Damlaan,2020,2
+WK191609,Leidschendam-Voorburg, Wijk 09 De Rietvink,2020,2
+WK191612,Leidschendam-Voorburg, Wijk 12 Prinsenhof,2020,2
+WK191613,Leidschendam-Voorburg, Wijk 13 Raadhuiskwartier,2020,2
+WK191617,Leidschendam-Voorburg, Wijk 17 Veursestraatweg-Noord,2020,2
+WK051820,'s-Gravenhage, Wijk 20 Valkenboskwartier,2020,3
+WK051821,'s-Gravenhage, Wijk 21 Regentessekwartier,2020,3
+WK051822,'s-Gravenhage, Wijk 22 Zeeheldenkwartier,2020,3
+WK051826,'s-Gravenhage, Wijk 26 Bezuidenhout,2020,3
+WK051827,'s-Gravenhage, Wijk 27 Stationsbuurt,2020,3
+WK051828,'s-Gravenhage, Wijk 28 Centrum,2020,3
+WK051831,'s-Gravenhage, Wijk 31 Rustenburg en Oostbroek,2020,3
+WK051838,'s-Gravenhage, Wijk 38 Laakkwartier en Spoorwijk,2020,3
+WK051839,'s-Gravenhage, Wijk 39 Binckhorst,2020,3
+WK051840,'s-Gravenhage, Wijk 40 Wateringse Veld,2020,3
+WK051841,'s-Gravenhage, Wijk 41 Hoornwijk,2020,3
+WK051842,'s-Gravenhage, Wijk 42 Ypenburg,2020,3
+WK051844,'s-Gravenhage, Wijk 44 Leidschenveen,2020,3
+WK060308,Rijswijk, Wijk 08,2020,3
+WK051829,'s-Gravenhage, Wijk 29 Schildersbuurt,2020,1
+WK051830,'s-Gravenhage, Wijk 30 Transvaalkwartier,2020,1
+WK051833,'s-Gravenhage, Wijk 33 Bouwlust en Vrederust,2020,1
+WK051834,'s-Gravenhage, Wijk 34 Morgenstond,2020,1
+WK051835,'s-Gravenhage, Wijk 35 Zuiderpark,2020,1
+WK051836,'s-Gravenhage, Wijk 36 Moerwijk,2020,1
+WK051837,'s-Gravenhage, Wijk 37 Groente- en Fruitmarkt,2020,1
