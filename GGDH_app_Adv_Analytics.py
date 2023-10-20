@@ -16,6 +16,7 @@ import requests
 import json
 import math
 from plotly.subplots import make_subplots
+import requests
 
 path = 'https://raw.githubusercontent.com/AmmarFaiq/GGDH-Dash-Adv-Analytics/main/data/'
 
@@ -48,8 +49,10 @@ values_all_regions = values_haaglanden + values_roaz
 
 geo_df = geo_df.query("gemnaam in @values_all_regions")
 
-# with open(path + 'wijkgeo_all_file.txt') as f:
-#   geo_df_fff = json.load(path + 'wijkgeo_all_file.csv')
+geofilepath = requests.get(path + 'wijkgeo_all_file.json')
+
+with open(geofilepath) as f:
+        geo_df_fff = json.load(f)
 
   
 df_numeric = pd.read_csv(path + 'df_numeric_ver_2.csv', sep=',', encoding='latin-1')
