@@ -51,9 +51,10 @@ geo_df = geo_df.query("gemnaam in @values_all_regions")
 
 geofilepath = requests.get(path + 'wijkgeo_all_file.json')
 
-with open(geofilepath) as f:
-        geo_df_fff = json.load(f)
+# with open(geofilepath) as f:
+#         geo_df_fff = json.load(f)
 
+geo_df_fff = json.loads(geofilepath.content)
   
 df_numeric = pd.read_csv(path + 'df_numeric_ver_2.csv', sep=',', encoding='latin-1')
 df_count = pd.read_csv(path + 'df_count_ver_2.csv', sep=',',encoding= 'latin-1')
