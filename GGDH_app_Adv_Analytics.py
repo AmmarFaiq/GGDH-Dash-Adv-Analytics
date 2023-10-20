@@ -1238,7 +1238,7 @@ def update_graph_map(
 
 
     if bivariate_style == 0:
-        fig = create_bivariate_map(df_supply_demand_CLUSTERED_bivariate[['WKC', 'Wijknaam', 'x', 'y']], color_sets['teal-red'], geo_df, name='Wijknaam', 
+        fig = create_bivariate_map(df_supply_demand_CLUSTERED_bivariate[['WKC', 'Wijknaam', 'x', 'y']], color_sets['teal-red'], geo_df_fff, name='Wijknaam', 
                                ids='WKC', conf=conf)
         
     else:
