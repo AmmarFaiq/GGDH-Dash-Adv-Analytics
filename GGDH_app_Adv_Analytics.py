@@ -103,18 +103,23 @@ COSTS_COLUMN_NAME = ['ZVWKOSTENTOTAAL_MEAN', 'ZVWKHUISARTS_MEAN', 'ZVWKHUISARTS_
                      ]
 
 MEDICATION_COLUMN_NAME = ['UniqueMed_Count', '%_HVZ_Medication_user','%_DIAB_Medication_user','%_BLOEDDRUKV_Medication_user', '%_CHOL_Medication_user',
-                      '%_UniqueMed_Count_>=5', '%_UniqueMed_Count_>=10', 
+                     '%_UniqueMed_Count_>=5', '%_UniqueMed_Count_>=10'
                      ]
 
 INCOME_COLUMN_NAME = ['Income_MEAN', '%_Employee', '%_Unemployment_benefit_user', '%_Welfare_benefit_user',
                       '%_Other_social_benefit_user', '%_Sickness_benefit_user','%_Pension_benefit_user',
-                      '%_Low_Income', '%_Debt_Mortgage',
+                      '%_Low_Income', '%_Debt_Mortgage', #
                      ]
+
+df['%_Wanbet'] = df['%_Wanbet'].mask(((df['YEAR'] <2010) | (df['YEAR'] >2021)), np.nan)
 
 df['Income_MEAN'] = df['Income_MEAN'].mask(((df['YEAR'] <2011) | (df['YEAR'] >2021)), np.nan)
 
 df['%_WMO_user'] = df['%_WMO_user'].mask(((df['YEAR'] <2015) ), np.nan)
 df['%_WLZ_user'] = df['%_WLZ_user'].mask(((df['YEAR'] <2015) ), np.nan)
+
+df['%_UniqueMed_Count_>=5'].mask(((df['YEAR'] <2009) | (df['YEAR'] >2021)), np.nan)
+df['%_UniqueMed_Count_>=10'].mask(((df['YEAR'] <2009) | (df['YEAR'] >2021)), np.nan)
 
 df['ZVWKOSTENTOTAAL_MEAN'] = df['ZVWKOSTENTOTAAL_MEAN'].mask( (df['YEAR'] >2020), np.nan)
 df['ZVWKFARMACIE_MEAN'] = df['ZVWKFARMACIE_MEAN'].mask( (df['YEAR'] >2020), np.nan)
@@ -124,12 +129,17 @@ df['ZVWKZIEKENHUIS_MEAN'] = df['ZVWKZIEKENHUIS_MEAN'].mask( (df['YEAR'] >2020), 
 df['ZVWKFARMACIE_MEAN'] = df['ZVWKFARMACIE_MEAN'].mask( (df['YEAR'] >2020), np.nan)
 df['ZVWKOSTENPSYCHO_MEAN'] = df['ZVWKOSTENPSYCHO_MEAN'].mask( (df['YEAR'] >2020), np.nan)
 
-df['%_ZVWKHUISARTS_user'] = df['%_ZVWKHUISARTS_user'].mask( (df['YEAR'] >2020), np.nan)
-df['%_ZVWKFARMACIE_user'] = df['%_ZVWKFARMACIE_user'].mask( (df['YEAR'] >2020), np.nan)
-df['%_ZVWKZIEKENHUIS_user'] = df['%_ZVWKZIEKENHUIS_user'].mask( (df['YEAR'] >2020), np.nan)
-df['%_ZVWKOSTENPSYCHO_user'] = df['%_ZVWKOSTENPSYCHO_user'].mask( (df['YEAR'] >2020), np.nan)
+df["%_ZVWKHUISARTS_user"] = df["%_ZVWKHUISARTS_user"].mask( (df['YEAR'] >2020), np.nan)
+df["%_ZVWKFARMACIE_user"] = df["%_ZVWKFARMACIE_user"].mask( (df['YEAR'] >2020), np.nan)
+df["%_ZVWKZIEKENHUIS_user"] = df["%_ZVWKZIEKENHUIS_user"].mask( (df['YEAR'] >2020), np.nan)
+df["%_ZVWKOSTENPSYCHO_user"] = df["%_ZVWKOSTENPSYCHO_user"].mask( (df['YEAR'] >2020), np.nan)
+
+for variable_name in INCOME_COLUMN_NAME:
+    df[variable_name] = df[[variable_name]].mask(((df['YEAR'] <2011) | (df['YEAR'] >2021)), np.nan)
 
 df['Total_ZVWKHUISARTS'] = df['ZVWKHUISARTS_MEAN'] * df['Total_Population']
+
+
 
 predictors_column = ['Total_Population', '%_HVZ_Medication_user', '%_71to80', '%_Chronic_Hartfalen_patients','%_DIAB_Medication_user', '%_CHOL_Medication_user','%_Unemployment_benefit_user', '%_WMO_user', '%_Debt','UniqueMed_Count', '%_WLZ_user', 'ZVWKHUISARTS']
 
@@ -168,20 +178,53 @@ server = app.server
 app.layout = html.Div([
 
     
-        html.Div([
-                    html.H1(children='Supply vs Demand in Healthcare Dashboard', style={
-                                                                'display': 'inline-block',    
-                                                                'width' : '180px',
-                                                                'height' : '50px',
-                                                                'margin-right': '150px',
-                                                                'margin-left': '10px',
-                                                                    'font-size': '20px',
-                                                                }),
-                    html.A([html.Img(src=app.get_asset_url('hc-dh-logo.png'), style={'display': 'inline-block',
+                                html.Div([
+                                            html.Div(
+                            [
+                                dbc.Row(
+                                    [
+                                        dbc.Col(
+                                            html.A([html.Img(src=app.get_asset_url('hc-dh-logo.png'), style={'display': 'inline-block',
                                                                              'margin-top': '10px',
                                                                 'width' : '110px',
                                                                 'height' : '110px'
                                                                 })], href='https://healthcampusdenhaag.nl/nl/'),
+                                            className="col-md-4",
+                                        ),
+                                        dbc.Col(
+                                            html.Div(
+                                                [
+                                                    html.H4("Supply vs Demand in Healthcare Dashboard", className="card-title"),
+                                                    # html.P(
+                                                    #     "This is a wider card with supporting text "
+                                                    #     "below as a natural lead-in to additional "
+                                                    #     "content. This content is a bit longer.",
+                                                    #     className="card-text",
+                                                    # ),
+                                                    html.Small(
+                                                        "Last updated October 2023",
+                                                        className="card-text text-muted",
+                                                    ),
+                                                ]
+                                            ),
+                                            className="col-md-8",
+                                        ),
+                                    ],
+                                    className="g-0 d-flex align-items-center",
+                                )
+                            ],
+                            className="mb-3",
+                            style={'margin-top': '10px','margin-left': '20px',"width": "540px",'height' : '120px'},
+                        ),
+                    # html.H1(children='Supply vs Demand in Healthcare Dashboard', style={
+                    #                                             'display': 'inline-block',    
+                    #                                             'width' : '180px',
+                    #                                             'height' : '50px',
+                    #                                             'margin-right': '150px',
+                    #                                             'margin-left': '100px',
+                    #                                                 'font-size': '20px',
+                    #                                             }),
+                    
                     html.Div([
                         html.A([html.Img(src=app.get_asset_url('lumc-1-500x500.jpg'), style={'display': 'inline-block',
                                                                                      'margin-top': '10px',
@@ -228,7 +271,7 @@ app.layout = html.Div([
                                                                 'width' : '100px',
                                                                 'height' : '100px'
                                                                 })], href='https://www.denhaag.nl/nl.htm'),
-                    ], style={'display': 'inline-block','margin-left': '300px'}),
+                    ], style={'display': 'inline-block','margin-left': '10%'}),
             
             
         ], style={ 
@@ -243,50 +286,85 @@ app.layout = html.Div([
 
     html.Div([
         
-
-
-
         html.Div([
             
 
             html.Div([
-    
-                    html.Div([
+
+                html.Div(
+                    dbc.Accordion(
+                        [
+                            dbc.AccordionItem(
+                                [
+                                    html.Div([
                     
                     
-                    html.Div([
-                    html.Label('Choose a region to plot:', id='choose_area'#, style= {'margin': '5px'}
-                               ),
-                                    drop_wijk, 
-                                ], style={'width': '15%','display': 'inline-block'}),
-                    html.Div([
-                    html.Label('Choose a cluster region (2020):', id='choose_cluster'#, style= {'margin': '5px'}
-                               ),
-                                dcc.Dropdown(
-                                            options=["1","2","3","4"],
-                                            value=["1","2","3","4"],
-                                            id = 'choose_cluster_id',
-                                            clearable=False,
-                                            # searchable=True, 
-                                            multi=True,
-                                            style= {'margin': '4px', 'box-shadow': '0px 0px #ebb36a', 'border-color': '#ebb36a'}        
-                                        ),
-                                ], style={'width': '15%','display': 'inline-block'}),
-                    html.Div([
-                    html.Label('Choose neighbourhoods to plot:', id='choose_wijk'#, style= {'margin': '5px'}
-                               ),
-                                    dcc.Dropdown(
-                                            # CATEGORICAL_COLUMN_NAME + NUMERIC_COLUMN_NAME,
-                                            # 'Total_Population',
-                                            id = 'drop_wijk_spec_id',
-                                            clearable=True,
-                                            searchable=True, 
-                                            multi=True,
-                                            style= {'margin': '4px', 'box-shadow': '0px 0px #ebb36a', 'border-color': '#ebb36a'}        
-                                        ),
-                             
-                                ], style={'width': '70%','display': 'inline-block'}),
-                    ], className='box'),
+                                        html.Div([
+                                        html.Label('Choose a region to plot:', id='choose_area'#, style= {'margin': '5px'}
+                                                ),
+                                                        drop_wijk, 
+                                                    ], style={'width': '15%','display': 'inline-block'}),
+                                        html.Div([
+                                        html.Label('Choose a cluster region (2020):', id='choose_cluster'#, style= {'margin': '5px'}
+                                                ),
+                                                    dcc.Dropdown(
+                                                                options=["1","2","3","4"],
+                                                                value=["1","2","3","4"],
+                                                                id = 'choose_cluster_id',
+                                                                clearable=False,
+                                                                # searchable=True, 
+                                                                multi=True,
+                                                                style= {'margin': '4px', 'box-shadow': '0px 0px #ebb36a', 'border-color': '#ebb36a'}        
+                                                            ),
+                                                    ], style={'width': '15%','display': 'inline-block'}),
+                                        html.Div([
+                                        html.Label('Choose neighbourhoods to plot:', id='choose_wijk'#, style= {'margin': '5px'}
+                                                ),
+                                                        dcc.Dropdown(
+                                                                # CATEGORICAL_COLUMN_NAME + NUMERIC_COLUMN_NAME,
+                                                                # 'Total_Population',
+                                                                id = 'drop_wijk_spec_id',
+                                                                clearable=True,
+                                                                searchable=True, 
+                                                                multi=True,
+                                                                style= {'margin': '4px', 'box-shadow': '0px 0px #ebb36a', 'border-color': '#ebb36a'}        
+                                                            ),
+                                                
+                                                    ], style={'width': '70%','display': 'inline-block'}),
+                                        ]),
+                                ],
+                                title="Region Selection :",
+                            ),
+                            # dbc.AccordionItem(
+                            #     [
+                            #         html.P("This is the content of the second section"),
+                            #         dbc.Button("Don't click me!", color="danger"),
+                            #     ],
+                            #     title="The Neighbourhood Cluster Choloropleth :",
+                            # ),
+                            # dbc.AccordionItem(
+                            #     "This is the content of the third section",
+                            #     title="General Practitioners Costs Prediction Trendline :",
+                            # ),
+                            # dbc.AccordionItem(
+                            #     "This is the content of the fourth section",
+                            #     title="Supply vs Demand Choloropleth :",
+                            # ),
+                            # dbc.AccordionItem(
+                            #     "This is the content of the fifth section",
+                            #     title="Various Population Variables Prediction Trendline :",
+                            # ),
+                        ],
+                    )
+                ),
+
+                
+        #     dbc.Button( "+ Collapse Region Selection", id="region-collapse-button",  n_clicks=0, className="mb-3"),
+        #     dbc.Collapse(id="region-collapse",
+        #     is_open=True,
+        # ),
+                    
+                    
                 html.Div([
                     
 
@@ -310,7 +388,7 @@ app.layout = html.Div([
                                                        }),
 
                             
-                        ], className='box', style={}), 
+                        ], className='box'), 
                         
                         html.Div([
                             html.Label(id='wijk_trend_label', style={'font-size': 'medium'}),
@@ -351,7 +429,7 @@ app.layout = html.Div([
                             ], style={'display':'flex', 'justify-content':'space-between'}),
                             html.Br(),
                             # html.Label('Click the button and legends to know more!', style={'font-size':'9px'}),
-                            dcc.Graph(id='wijk_trend_fig', style={'height':'400px'}),
+                            dcc.Graph(id='wijk_trend_fig', style={'height':'800px'}),
                         ], className='box', style={
                                                     'position':'relative', 
                                                 }), 
@@ -452,7 +530,7 @@ app.layout = html.Div([
                             ], style={'display':'flex', 'justify-content':'space-between'}),
                             html.Br(),
                             # html.Label('Click the button and legends to know more!', style={'font-size':'9px'}),
-                            dcc.Graph(id='wijk_trend_fig_all_var', style={'height':'400px'}),
+                            dcc.Graph(id='wijk_trend_fig_all_var', style={'height':'900px'}),
                         ], className='box', style={
                                                     'position':'relative', 
                                                 }), 
@@ -501,7 +579,7 @@ app.layout = html.Div([
         html.Div([
                 html.Div([
                     html.P(['Health Campus Den Haag', html.Br(),'Turfmarkt 99, 3e etage, 2511 DP, Den Haag'], style={'color':'white', 'font-size':'12px'}),
-                ], style={'width':'60%'}), 
+                ], style={'width':'60%', 'margin-left':'5%'}), 
                 html.Div([
                     html.P(['Sources ', html.Br(), html.A('GGDH-ELAN', href='https://gezondengelukkigdenhaag.nl/', target='_blank'), ', ', html.A('Microdata CBS', href='https://www.cbs.nl/en-gb/our-services/customised-services-microdata/microdata-conducting-your-own-research', target='_blank')], style={'color':'white', 'font-size':'12px'})
                 ], style={'width':'37%'}),
@@ -625,33 +703,41 @@ def update_graph(
     
     
         
-    dff1 = df.query("Wijknaam in @wijk_spec")
+   dff1 = df.query("Wijknaam in @wijk_spec")
     dff2 = df_projected.query("Wijknaam in @wijk_spec")
 
     dff1 = dff1.merge(df_demand_CLUSTERED_Year[df_demand_CLUSTERED_Year.YEAR == 2020][['WKC','Cluster_Reworked']], on=['WKC'], how='left')
     dff2 = dff2.merge(df_demand_CLUSTERED_Year[df_demand_CLUSTERED_Year.YEAR == 2020][['WKC','Cluster_Reworked']], on=['WKC'], how='left')
 
+    # dff1 = dff1[dff1.YEAR <= 2020]
+
+    dff1_add = dff1[dff1.YEAR==2020][dff2.columns.drop(['Projection_demand','Total cost GP care'])]
+    dff1_add.rename(columns={'ZVWKHUISARTS_MEAN':'Projection_demand', 'Total_ZVWKHUISARTS':'Total cost GP care'}, inplace=True)
+    dff2 = dff1_add.append(dff2)
+    
+
     # GROUPBY dff1 VALUE PER CLUSTER
     dff1_agg = dff1.groupby(['YEAR', 'Cluster_Reworked']).agg({'ZVWKHUISARTS_MEAN':'mean', 'Total_ZVWKHUISARTS':'mean'}).reset_index()
     dff2_agg = dff2.groupby(['YEAR', 'Cluster_Reworked']).agg({'Projection_demand':'mean', 'Total cost GP care':'mean'}).reset_index()
-
 
     wijk_dict = {}
     for i in range(len(dff1['WKC'].unique())):
         wijk_dict[dff1['Wijknaam'].unique()[i]] = i
     
-    colorscale = ["#402580", 
-                  "#38309F", 
-                  "#3C50BF", 
-                  "#4980DF", 
-                  "#56B7FF",
-                  "#6ADDFF",
-                "#7FFCFF",
-                "#95FFF5",
-                "#ABFFE8",
-                "#C2FFE3",
-                "#DAFFE6"
-                  ]
+    # colorscale = ["#402580", 
+    #               "#38309F", 
+    #               "#3C50BF", 
+    #               "#4980DF", 
+    #               "#56B7FF",
+    #               "#6ADDFF",
+    #             "#7FFCFF",
+    #             "#95FFF5",
+    #             "#ABFFE8",
+    #             "#C2FFE3",
+    #             "#DAFFE6"
+    #               ]
+    colorscale = ["#03045E", "#023E8A", "#0077B6", "#0096C7", "#00B4D8", "#FF9E00", "#FF9100", "#FF8500", "#FF6D00", "#FF5400"]
+    
     
     fig = make_subplots(specs=[[{"secondary_y": True}]])
 
@@ -1122,8 +1208,8 @@ def update_graph_map(
     weighted_avg_2020 = lambda x: sum(x['Total_Population_2020'] * x['ZVWKHUISARTS_MEAN']) / sum(x['Total_Population_2020'])
     weighted_avg_2030_df = df_supply_demand_CLUSTERED_only.groupby('population_cluster').apply(weighted_avg_2030).to_frame('weighted_avg_2030').reset_index()
     weighted_avg_2020_df = df_supply_demand_CLUSTERED_only.groupby('population_cluster').apply(weighted_avg_2020).to_frame('weighted_avg_2020').reset_index()
-    df_supply_demand_CLUSTERED_only = df_supply_demand_CLUSTERED_only.merge(weighted_avg_2030_df, on='population_cluster')#[['WKC','Wijknaam','Projection_demand','supply_cluster','ZVWKHUISARTS_MEAN','population_cluster','Total_Population_2030','Total_Population_2020','weighted_avg_2030']]
-    df_supply_demand_CLUSTERED_only = df_supply_demand_CLUSTERED_only.merge(weighted_avg_2020_df, on='population_cluster')#[['WKC','Wijknaam','Projection_demand','supply_cluster','ZVWKHUISARTS_MEAN','population_cluster','Total_Population_2030','Total_Population_2020','weighted_avg_2030','weighted_avg_2020']]
+    df_supply_demand_CLUSTERED_only = df_supply_demand_CLUSTERED_only.merge(weighted_avg_2030_df, on='population_cluster')
+    df_supply_demand_CLUSTERED_only = df_supply_demand_CLUSTERED_only.merge(weighted_avg_2020_df, on='population_cluster')
 
     df_supply_demand_CLUSTERED_only['weighted_ratio'] = df_supply_demand_CLUSTERED_only['weighted_avg_2030'] / df_supply_demand_CLUSTERED_only['weighted_avg_2020'] 
 
@@ -1222,16 +1308,16 @@ def update_graph_map(
 
     def my_logic(row):
         if (row["y"] <= med_y) & (row["x"] <= med_x):
-            return '4 - Low Supply - Low Demand'
+            return 'D - Low Supply - Low Demand'
         
         elif (row["y"] <= med_y) & (row["x"] > med_x):
-            return '1 - Low Supply - High Demand'
+            return 'A - Low Supply - High Demand'
         
         elif (row["y"] > med_y) & (row["x"] <= med_x):
-            return '3 - High Supply - Low Demand'
+            return 'C - High Supply - Low Demand'
         
         elif (row["y"] > med_y) & (row["x"] > med_x):
-            return '2 - High Supply - High Demand'
+            return 'B - High Supply - High Demand'
         else:
             return 'demand = {} - {} + supply = {} - {}'.format(row["x"],med_x,row["y"],med_y)
         
@@ -1250,10 +1336,10 @@ def update_graph_map(
                                         mapbox_style="carto-positron", zoom=9.5, hover_name="Wijknaam", 
                                                                 # animation_frame="YEAR", 
                                         color_discrete_map={
-                                                            '1 - Low Supply - High Demand':'#c85a5a',
-                                                            '2 - High Supply - High Demand':'#985356',
-                                                            '4 - Low Supply - Low Demand':'#b0d5df',
-                                                            '3 - High Supply - Low Demand':'#64acbe'}
+                                                            'A - Low Supply - High Demand':'#c85a5a',
+                                                            'B - High Supply - High Demand':'#985356',
+                                                            'D - Low Supply - Low Demand':'#b0d5df',
+                                                            'C - High Supply - Low Demand':'#64acbe'}
         )
     
 
@@ -1289,37 +1375,33 @@ def update_graph(
     
         
     dff1 = df.query("Wijknaam in @wijk_spec")
-    dff2 = data_projected_clust_pred.query("Wijknaam in @wijk_spec")
-    dff2.drop(columns=['Cluster_Reworked_Number'], inplace=True)
+    # dff2 = data_projected_clust_pred.query("Wijknaam in @wijk_spec")
+    # dff2.drop(columns=['Cluster_Reworked_Number'], inplace=True)
 
+    dff2 = df_demand_CLUSTERED_proj.query("Wijknaam in @wijk_spec")
+    # dff2.drop(columns=['Cluster_Reworked'], inplace=True)
 
     dff1 = dff1.merge(df_demand_CLUSTERED_Year[df_demand_CLUSTERED_Year.YEAR == 2020][['WKC','Cluster_Reworked']], on=['WKC'], how='left')
     dff2 = dff2.merge(df_demand_CLUSTERED_Year[df_demand_CLUSTERED_Year.YEAR == 2020][['WKC','Cluster_Reworked']], on=['WKC'], how='left')
 
+    # dff2 = dff2[dff2.columns.drop(['Projection_demand','Total cost GP care'])]
     dff1 = dff1[dff1.YEAR <= 2020]
+
+    dff1_add = dff1[dff1.YEAR==2020]
+    dff2 = dff1_add.append(dff2)
 
     if variable_name in NUMERIC_COLUMN_NAME :
         variable_name = variable_name + "_MEAN"
     else:
         variable_name = variable_name
     
+   
 
     wijk_dict = {}
     for i in range(len(dff1['WKC'].unique())):
         wijk_dict[dff1['Wijknaam'].unique()[i]] = i
     
-    colorscale = ["#402580", 
-                  "#38309F", 
-                  "#3C50BF", 
-                  "#4980DF", 
-                  "#56B7FF",
-                  "#6ADDFF",
-                "#7FFCFF",
-                "#95FFF5",
-                "#ABFFE8",
-                "#C2FFE3",
-                "#DAFFE6"
-                  ]
+    colorscale = ["#03045E", "#023E8A", "#0077B6", "#0096C7", "#00B4D8", "#FF9E00", "#FF9100", "#FF8500", "#FF6D00", "#FF5400"]
     
     fig = make_subplots(specs=[[{"secondary_y": True}]])
 
@@ -1411,8 +1493,6 @@ def update_graph(
               ))
 
     return title, fig
-
-
 
 # take the first row of the dataframe and create a copy of it for n timess
 
