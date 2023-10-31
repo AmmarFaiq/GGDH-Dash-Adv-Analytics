@@ -61,12 +61,18 @@ df_count = pd.read_csv(path + 'df_count_ver_2.csv', sep=',',encoding= 'latin-1')
 df = df_count.merge(df_numeric, on=['WKC','Wijknaam','GMN','YEAR'])
 
 df_demand_CLUSTERED = pd.read_csv(path + 'df_demand_CLUSTERED_2.csv')
+df_demand_CLUSTERED_proj = pd.read_csv(path + 'df_demand_CLUSTERED_proj_2.csv')
 data_projected_clust_pred = pd.read_csv(path + 'data_projected_clust_pred_2.csv')
 
 # change negative values to 0
 cols = data_projected_clust_pred.select_dtypes(include=np.number).columns
 data_projected_clust_pred[cols] = data_projected_clust_pred[cols].clip(lower=0)
 data_projected_clust_pred['Total_Population'] = data_projected_clust_pred['Total_Population'].astype(int)
+
+# change negative values to 0
+cols = df_demand_CLUSTERED_proj.select_dtypes(include=np.number).columns
+df_demand_CLUSTERED_proj[cols] = df_demand_CLUSTERED_proj[cols].clip(lower=0)
+df_demand_CLUSTERED_proj['Total_Population'] = df_demand_CLUSTERED_proj['Total_Population'].astype(int)
 
 df_demand_CLUSTERED_Year = pd.read_csv(path + 'df_demand_CLUSTERED_Year_2.csv')
 
