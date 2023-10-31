@@ -703,7 +703,7 @@ def update_graph(
     
     
         
-   dff1 = df.query("Wijknaam in @wijk_spec")
+    dff1 = df.query("Wijknaam in @wijk_spec")
     dff2 = df_projected.query("Wijknaam in @wijk_spec")
 
     dff1 = dff1.merge(df_demand_CLUSTERED_Year[df_demand_CLUSTERED_Year.YEAR == 2020][['WKC','Cluster_Reworked']], on=['WKC'], how='left')
