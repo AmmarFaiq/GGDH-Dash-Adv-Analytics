@@ -713,8 +713,8 @@ def update_graph(
 
     dff1_add = dff1[dff1.YEAR==2020][dff2.columns.drop(['Projection_demand','Total cost GP care'])]
     dff1_add.rename(columns={'ZVWKHUISARTS_MEAN':'Projection_demand', 'Total_ZVWKHUISARTS':'Total cost GP care'}, inplace=True)
-    dff2 = dff1_add.append(dff2)
-    
+    # dff2 = dff1_add.append(dff2)
+    dff2 = pd.concat([dff1_add, dff2], ignore_index=True)
 
     # GROUPBY dff1 VALUE PER CLUSTER
     dff1_agg = dff1.groupby(['YEAR', 'Cluster_Reworked']).agg({'ZVWKHUISARTS_MEAN':'mean', 'Total_ZVWKHUISARTS':'mean'}).reset_index()
@@ -1388,8 +1388,10 @@ def update_graph(
     dff1 = dff1[dff1.YEAR <= 2020]
 
     dff1_add = dff1[dff1.YEAR==2020]
-    dff2 = dff1_add.append(dff2)
-
+    # dff2 = dff1_add.append(dff2)
+    dff2 = pd.concat([dff1_add, dff2], ignore_index=True)
+                         
+                         
     if variable_name in NUMERIC_COLUMN_NAME :
         variable_name = variable_name + "_MEAN"
     else:
