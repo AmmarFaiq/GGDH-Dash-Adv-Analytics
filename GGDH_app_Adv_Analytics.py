@@ -45,7 +45,7 @@ values_hadoks= ["'s-Gravenhage", "Leidschendam-Voorburg", "Rijswijk", "Wassenaar
 
 values_all_regions = values_haaglanden + values_roaz
 
-geo_df = geojsondata.query("gemnaam in @values_all_regions")
+geo_df = geojsondata.query("GM_NAAM in @values_all_regions")
 
 geofilepath = requests.get(path + 'wijkgeo_file.json')
 
