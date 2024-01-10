@@ -20,15 +20,13 @@ import requests
 
 path = 'https://raw.githubusercontent.com/AmmarFaiq/GGDH-Dash-Adv-Analytics/main/data/'
 
-geojsondata = gpd.read_file("https://github.com/AmmarFaiq/GGDH-Dash-Adv-Analytics/raw/main/data/wijk_2016_6.geojson")
+geojsondata = gpd.read_file("https://github.com/AmmarFaiq/GGDH-Dash-Adv-Analytics/raw/main/data/wijk_2023_v0.shp")
 
 geojsondata = geojsondata.to_crs(epsg=4326)
-geojsondata = geojsondata.explode(index_parts=False)
-df_info = pd.read_csv(path + 'WijkEenzaamheid2016.csv')
+# geojsondata = geojsondata.explode(index_parts=False)
+# df_info = pd.read_csv(path + 'WijkEenzaamheid2016.csv')
 
-geo_df = geojsondata.merge(df_info, left_on="WKC", right_on= "wijkcode")
-
-values_region= ["'s-Gravenhage", "Haaglanden", "Leiden", "Roaz", "Wassenaar"]
+# geo_df = geojsondata.merge(df_info, left_on="WKC", right_on= "wijkcode")
 
 values_haaglanden=["'s-Gravenhage",
         "Delft","Leidschendam-Voorburg",
@@ -47,22 +45,19 @@ values_hadoks= ["'s-Gravenhage", "Leidschendam-Voorburg", "Rijswijk", "Wassenaar
 
 values_all_regions = values_haaglanden + values_roaz
 
-geo_df = geo_df.query("gemnaam in @values_all_regions")
+geo_df = geojsondata.query("gemnaam in @values_all_regions")
 
-geofilepath = requests.get(path + 'wijkgeo_all_file.json')
-
-# with open(geofilepath) as f:
-#         geo_df_fff = json.load(f)
+geofilepath = requests.get(path + 'wijkgeo_file.json')
 
 geo_df_fff = json.loads(geofilepath.content)
   
-df_numeric = pd.read_csv(path + 'df_numeric_ver_2.csv', sep=',', encoding='latin-1')
-df_count = pd.read_csv(path + 'df_count_ver_2.csv', sep=',',encoding= 'latin-1')
+df_numeric = pd.read_csv(path + 'df_numeric_ver_3.csv', sep=',', encoding='latin-1')
+df_count = pd.read_csv(path + 'df_count_ver_3.csv', sep=',',encoding= 'latin-1')
 df = df_count.merge(df_numeric, on=['WKC','Wijknaam','GMN','YEAR'])
 
-df_demand_CLUSTERED = pd.read_csv(path + 'df_demand_CLUSTERED_2.csv')
-df_demand_CLUSTERED_proj = pd.read_csv(path + 'df_demand_CLUSTERED_proj_2.csv')
-data_projected_clust_pred = pd.read_csv(path + 'data_projected_clust_pred_2.csv')
+df_demand_CLUSTERED = pd.read_csv(path + 'df_demand_CLUSTERED_3.csv')
+df_demand_CLUSTERED_proj = pd.read_csv(path + 'df_demand_CLUSTERED_proj_3.csv')
+data_projected_clust_pred = pd.read_csv(path + 'data_projected_clust_pred_3.csv')
 
 # change negative values to 0
 cols = data_projected_clust_pred.select_dtypes(include=np.number).columns
@@ -74,9 +69,9 @@ cols = df_demand_CLUSTERED_proj.select_dtypes(include=np.number).columns
 df_demand_CLUSTERED_proj[cols] = df_demand_CLUSTERED_proj[cols].clip(lower=0)
 df_demand_CLUSTERED_proj['Total_Population'] = df_demand_CLUSTERED_proj['Total_Population'].astype(int)
 
-df_demand_CLUSTERED_Year = pd.read_csv(path + 'df_demand_CLUSTERED_Year_2.csv')
+df_demand_CLUSTERED_Year = pd.read_csv(path + 'df_demand_CLUSTERED_Year_3.csv')
 
-df_supply_CLUSTERED = pd.read_csv(path + 'df_supply_CLUSTERED_2.csv')
+df_supply_CLUSTERED = pd.read_csv(path + 'df_supply_CLUSTERED_3.csv')
 
 # order df_demand_CLUSTERED_Year by YEAR
 df_demand_CLUSTERED_Year = df_demand_CLUSTERED_Year.sort_values(by=['YEAR','Cluster_Reworked'])
@@ -672,7 +667,7 @@ def update_graph_map(
 
 
     fig = px.choropleth_mapbox(dff, geojson=geo_df, color="Cluster Name",
-                                    locations="WKC", featureidkey="properties.WKC", opacity = 0.4,
+                                    locations="WKC", featureidkey="properties.WK_CODE", opacity = 0.4,
                                     center={"lat": 52.1, "lon": 4.24},
                                     mapbox_style="carto-positron", zoom=9.5,hover_name="Wijknaam", 
                                                             animation_frame="YEAR", 
@@ -1060,7 +1055,7 @@ def create_bivariate_map(df, colors, geojson, x='x', y='y', ids='id', name='name
     fig = go.Figure(go.Choroplethmapbox(
         geojson=geojson,
         locations=df_plot[ids],
-        featureidkey="properties.WKC",
+        featureidkey="properties.WK_CODE",
         z=df_plot['biv_bins'],
         marker_line_width=.5,
         # mapbox_style="carto-positron",
@@ -1337,7 +1332,7 @@ def update_graph_map(
     else:
         df_supply_demand_CLUSTERED_bivariate = df_supply_demand_CLUSTERED_bivariate.sort_values(['Supply Demand Cluster'], ascending=[True])
         fig = px.choropleth_mapbox(df_supply_demand_CLUSTERED_bivariate, geojson=geo_df, color="Supply Demand Cluster",
-                                        locations="WKC", featureidkey="properties.WKC", opacity = 0.4,
+                                        locations="WKC", featureidkey="properties.WK_CODE", opacity = 0.4,
                                         center={"lat": 52.1, "lon": 4.24},
                                         mapbox_style="carto-positron", zoom=9.5, hover_name="Wijknaam", 
                                                                 # animation_frame="YEAR", 
