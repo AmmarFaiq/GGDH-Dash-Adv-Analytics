@@ -37,7 +37,7 @@ values_hadoks= ["'s-Gravenhage", "Leidschendam-Voorburg", "Rijswijk", "Wassenaar
 
 path = 'https://raw.githubusercontent.com/AmmarFaiq/GGDH-Dash-Adv-Analytics/main/data/'
 
-geojsondata = gpd.read_file('C:/Users/fq_am/ELANDASH/data/wijk_2023_v0.shp')
+geojsondata = gpd.read_file(path + 'wijk_2023_v0.shp')
 
 geojsondata = geojsondata.to_crs(epsg=4326)
 # geojsondata = geojsondata.explode(index_parts=False)
