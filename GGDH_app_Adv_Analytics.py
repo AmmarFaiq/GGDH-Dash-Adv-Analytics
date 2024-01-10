@@ -16,36 +16,33 @@ import requests
 import json
 import math
 from plotly.subplots import make_subplots
-import requests
 
-path = 'https://raw.githubusercontent.com/AmmarFaiq/GGDH-Dash-Adv-Analytics/main/data/'
+# values_haaglanden=["'s-Gravenhage",
+#         "Delft","Leidschendam-Voorburg",
+#         "Midden-Delfland", 
+#         "Pijnacker-Nootdorp","Rijswijk",
+#         "Wassenaar","Westland","Zoetermeer"]
 
-geojsondata = gpd.read_file("https://github.com/AmmarFaiq/GGDH-Dash-Adv-Analytics/raw/main/data/wijk_2023_v0.shp")
+# values_roaz=["'s-Gravenhage", "Alphen aan den Rijn", "Bodegraven-Reeuwijk",
+#         "Delft","Gouda","Hillegom", "Kaag en Braassem","Katwijk",
+#         "Krimpenerwaard","Leiden","Leiderdorp", "Leidschendam-Voorburg",
+#         "Lisse","Midden-Delfland","Nieuwkoop","Noordwijk","Oegstgeest",
+#         "Pijnacker-Nootdorp","Rijswijk","Teylingen","Voorschoten", "Waddinxveen",
+#         "Wassenaar","Westland","Zoetermeer","Zoeterwoude","Zuidplas"]
 
-geojsondata = geojsondata.to_crs(epsg=4326)
-# geojsondata = geojsondata.explode(index_parts=False)
-# df_info = pd.read_csv(path + 'WijkEenzaamheid2016.csv')
-
-# geo_df = geojsondata.merge(df_info, left_on="WKC", right_on= "wijkcode")
-
-values_haaglanden=["'s-Gravenhage",
-        "Delft","Leidschendam-Voorburg",
-        "Midden-Delfland", 
-        "Pijnacker-Nootdorp","Rijswijk",
-        "Wassenaar","Westland","Zoetermeer"]
-
-values_roaz=["'s-Gravenhage", "Alphen aan den Rijn", "Bodegraven-Reeuwijk",
-        "Delft","Gouda","Hillegom", "Kaag en Braassem","Katwijk",
-        "Krimpenerwaard","Leiden","Leiderdorp", "Leidschendam-Voorburg",
-        "Lisse","Midden-Delfland","Nieuwkoop","Noordwijk","Oegstgeest",
-        "Pijnacker-Nootdorp","Rijswijk","Teylingen","Voorschoten", "Waddinxveen",
-        "Wassenaar","Westland","Zoetermeer","Zoeterwoude","Zuidplas"]
+# values_all_regions = values_haaglanden + values_roaz
 
 values_hadoks= ["'s-Gravenhage", "Leidschendam-Voorburg", "Rijswijk", "Wassenaar"]
 
-values_all_regions = values_haaglanden + values_roaz
 
-geo_df = geojsondata.query("GM_NAAM in @values_all_regions")
+path = 'https://raw.githubusercontent.com/AmmarFaiq/GGDH-Dash-Adv-Analytics/main/data/'
+
+geojsondata = gpd.read_file('C:/Users/fq_am/ELANDASH/data/wijk_2023_v0.shp')
+
+geojsondata = geojsondata.to_crs(epsg=4326)
+# geojsondata = geojsondata.explode(index_parts=False)
+
+geo_df = geojsondata.query("GM_NAAM in @values_hadoks")
 
 geofilepath = requests.get(path + 'wijkgeo_file.json')
 
