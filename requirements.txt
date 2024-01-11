@@ -1,5 +1,5 @@
 gunicorn
-dash
+dash == 2.14.2
 dash-core-components
 dash-html-components
 dash_renderer

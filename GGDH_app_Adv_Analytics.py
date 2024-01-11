@@ -603,7 +603,7 @@ def update_slider(wijk_name,cluster_num):
 
         dff = df_demand_CLUSTERED_Year.query("GMN in @values_hadoks")     
         options = list(dff.Wijknaam.unique())
-        dff = dff[dff.YEAR == 2020].query("Cluster_Reworked in @cluster_num")
+        dff = dff.query("Cluster_Reworked in @cluster_num")
         options2 = list(dff.Wijknaam.unique())
         
     elif wijk_name == "'s-gravenhage":    
@@ -667,7 +667,7 @@ def update_graph_map(
                                     locations="WKC", featureidkey="properties.WK_CODE", opacity = 0.4,
                                     center={"lat": 52.1, "lon": 4.24},
                                     mapbox_style="carto-positron", zoom=9.5,hover_name="Wijknaam", 
-                                                            animation_frame="YEAR", 
+                                                           # animation_frame="YEAR", 
                                     color_discrete_map={
                                                         '1 - Higher Care Cost - Lower SES - Younger Population - Higher Ethnic Minority':'red',
                                                         '2 - Higher Care Cost-Higher SES - Older Population - Lower Ethnic Minority':'firebrick',
