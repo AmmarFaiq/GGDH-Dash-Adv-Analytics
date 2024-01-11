@@ -605,6 +605,40 @@ def update_slider(wijk_name,cluster_num):
         options = list(dff.Wijknaam.unique())
         dff = dff.query("Cluster_Reworked in @cluster_num")
         options2 = list(dff.Wijknaam.unique())
+        options = [' Wijk 01 Oostduinen', ' Wijk 02 Belgisch Park',
+       ' Wijk 04 Benoordenhout', ' Wijk 05 Archipelbuurt',
+       ' Wijk 09 Geuzen- en Statenkwartier', ' Wijk 11 Duinoord',
+       ' Wijk 12 Bomen- en Bloemenbuurt', ' Wijk 13 Vogelwijk',
+       ' Wijk 19 Vruchtenbuurt', ' Wijk 23 Willemspark',
+       ' Wijk 26 Bezuidenhout', ' Wijk 40 Wateringse Veld',
+       ' Wijk 42 Ypenburg', ' Wijk 44 Leidschenveen', ' Wijk 01',
+       ' Wijk 11', ' Wijk 00 Zuidwestelijk deel der gemeente',
+       ' Wijk 01 Noordoostelijk deel der gemeente', ' Wijk Stompwijk',
+       ' Wijk Voorburg Noord', ' Wijk Voorburg West / Park Leeuwenbergh',
+       ' Wijk Voorburg Oud', ' Wijk 03 Westbroekpark en Duttendel',
+       ' Wijk 07 Scheveningen', ' Wijk 08 Duindorp',
+       ' Wijk 14 Bohemen en Meer en Bos',
+       ' Wijk 15 Kijkduin en Ockenburgh',
+       ' Wijk 16 Kraayenstein en Vroondaal', ' Wijk 17 Loosduinen',
+       ' Wijk 18 Waldeck', ' Wijk 25 Mariahoeve en Marlot',
+       ' Wijk 32 Leyenburg', ' Wijk 02', ' Wijk 04', ' Wijk 06',
+       ' Wijk 07', ' Wijk 08', ' Wijk 09',
+       ' Wijk De Zijde / Duivenvoorde / Park Veursehou',
+       ' Wijk Prinsenhof', " Wijk 't Lien / De Rietvink",
+       ' Wijk Leidschendam - Zuid en omgeving',
+       ' Wijk De Heuvel / Amstelwijk', ' Wijk 07 Damsigt en omgeving',
+       ' Wijk Essesteijn', ' Wijk Voorburg Midden', ' Wijk Bovenveen',
+       ' Wijk 06 Van Stolkpark en Scheveningse Bo', ' Wijk 10 Zorgvliet',
+       ' Wijk 24 Haagse Bos', ' Wijk 41 Hoornwijk', ' Wijk 43 Forepark',
+       ' Wijk 03', ' Wijk 05', ' Wijk 10', ' Wijk 20 Valkenboskwartier',
+       ' Wijk 21 Regentessekwartier', ' Wijk 22 Zeeheldenkwartier',
+       ' Wijk 27 Stationsbuurt', ' Wijk 28 Centrum',
+       ' Wijk 29 Schildersbuurt', ' Wijk 30 Transvaalkwartier',
+       ' Wijk 31 Rustenburg en Oostbroek',
+       ' Wijk 33 Bouwlust en Vrederust', ' Wijk 34 Morgenstond',
+       ' Wijk 35 Zuiderpark', ' Wijk 36 Moerwijk',
+       ' Wijk 37 Groente- en Fruitmarkt',
+       ' Wijk 38 Laakkwartier en Spoorwijk', ' Wijk 39 Binckhorst']
         
     elif wijk_name == "'s-gravenhage":    
 
