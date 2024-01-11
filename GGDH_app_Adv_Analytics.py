@@ -688,7 +688,7 @@ def update_graph_map(
                   ]
 
 
-    title = 'Clustering of Neighbourhoods in ' + wijk_name 
+    title = 'Clustering of Neighbourhoods in ' + wijk_name + ' in 2020'
         
     dff = df_demand_CLUSTERED_Year.query("Wijknaam in @wijk_spec")
     dff['Cluster Name'] = dff['Cluster_Reworked'].map({'1':'1 - Higher Care Cost - Lower SES - Younger Population - Higher Ethnic Minority', 
@@ -697,7 +697,7 @@ def update_graph_map(
                                                        '4':'4 - Lower Care Cost - Higher SES - Older Population - Lower Minority'})
 
 
-    fig = px.choropleth_mapbox(dff, geojson=geo_df, color="Cluster Name",
+    fig = px.choropleth_mapbox(dff[dff.YEAR == 2020], geojson=geo_df, color="Cluster Name",
                                     locations="WKC", featureidkey="properties.WK_CODE", opacity = 0.4,
                                     center={"lat": 52.1, "lon": 4.24},
                                     mapbox_style="carto-positron", zoom=9.5,hover_name="Wijknaam", 
