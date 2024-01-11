@@ -52,14 +52,24 @@ df_numeric = pd.read_csv(path + 'df_numeric_ver_3.csv', sep=',', encoding='latin
 df_count = pd.read_csv(path + 'df_count_ver_3.csv', sep=',',encoding= 'latin-1')
 df = df_count.merge(df_numeric, on=['WKC','Wijknaam','GMN','YEAR'])
 
+df = df[df.YEAR < 2021]
+df = df[df.YEAR > 2009]
+df = df[df.WKC != 'WK1916--']
+
+# REMOVE word "Wijk " if we found double the words in column Wijknaam (Wijk Wijk)
+df['Wijknaam'] = df['Wijknaam'].str.replace('Wijk Wijk ', 'Wijk ')
+
 df_demand_CLUSTERED = pd.read_csv(path + 'df_demand_CLUSTERED_3.csv')
 df_demand_CLUSTERED_proj = pd.read_csv(path + 'df_demand_CLUSTERED_proj_3.csv')
 data_projected_clust_pred = pd.read_csv(path + 'data_projected_clust_pred_3.csv')
+df_demand_CLUSTERED = pd.read_csv(path + 'df_demand_CLUSTERED_2.csv')
+data_projected_clust_pred = pd.read_csv(path + 'data_projected_clust_pred_2.csv')
 
 # change negative values to 0
 cols = data_projected_clust_pred.select_dtypes(include=np.number).columns
 data_projected_clust_pred[cols] = data_projected_clust_pred[cols].clip(lower=0)
 data_projected_clust_pred['Total_Population'] = data_projected_clust_pred['Total_Population'].astype(int)
+
 
 # change negative values to 0
 cols = df_demand_CLUSTERED_proj.select_dtypes(include=np.number).columns
@@ -67,6 +77,9 @@ df_demand_CLUSTERED_proj[cols] = df_demand_CLUSTERED_proj[cols].clip(lower=0)
 df_demand_CLUSTERED_proj['Total_Population'] = df_demand_CLUSTERED_proj['Total_Population'].astype(int)
 
 df_demand_CLUSTERED_Year = pd.read_csv(path + 'df_demand_CLUSTERED_Year_3.csv')
+
+df_demand_CLUSTERED_Year = pd.read_csv(path + 'df_demand_CLUSTERED_Year_2.csv')
+
 
 df_supply_CLUSTERED = pd.read_csv(path + 'df_supply_CLUSTERED_3.csv')
 
@@ -302,19 +315,19 @@ app.layout = html.Div([
                                                 ),
                                                         drop_wijk, 
                                                     ], style={'width': '15%','display': 'inline-block'}),
-                                        html.Div([
-                                        html.Label('Choose a cluster region (2020):', id='choose_cluster'#, style= {'margin': '5px'}
-                                                ),
-                                                    dcc.Dropdown(
-                                                                options=["1","2","3","4"],
-                                                                value=["1","2","3","4"],
-                                                                id = 'choose_cluster_id',
-                                                                clearable=False,
-                                                                # searchable=True, 
-                                                                multi=True,
-                                                                style= {'margin': '4px', 'box-shadow': '0px 0px #ebb36a', 'border-color': '#ebb36a'}        
-                                                            ),
-                                                    ], style={'width': '15%','display': 'inline-block'}),
+                                        # html.Div([
+                                        # html.Label('Choose a cluster region (2020):', id='choose_cluster'#, style= {'margin': '5px'}
+                                        #         ),
+                                        #             dcc.Dropdown(
+                                        #                         options=["1","2","3","4"],
+                                        #                         value=["1","2","3","4"],
+                                        #                         id = 'choose_cluster_id',
+                                        #                         clearable=False,
+                                        #                         # searchable=True, 
+                                        #                         multi=True,
+                                        #                         style= {'margin': '4px', 'box-shadow': '0px 0px #ebb36a', 'border-color': '#ebb36a'}        
+                                        #                     ),
+                                        #             ], style={'width': '15%','display': 'inline-block'}),
                                         html.Div([
                                         html.Label('Choose neighbourhoods to plot:', id='choose_wijk'#, style= {'margin': '5px'}
                                                 ),
@@ -328,7 +341,7 @@ app.layout = html.Div([
                                                                 style= {'margin': '4px', 'box-shadow': '0px 0px #ebb36a', 'border-color': '#ebb36a'}        
                                                             ),
                                                 
-                                                    ], style={'width': '70%','display': 'inline-block'}),
+                                                    ], style={'width': '85%','display': 'inline-block'}),
                                         ]),
                                 ],
                                 title="Region Selection :",
@@ -594,17 +607,17 @@ app.layout = html.Div([
     ],
     [
         Input('drop_wijk', 'value'),
-        Input('choose_cluster_id', 'value')
+        # Input('choose_cluster_id', 'value')
     ]
 )
-def update_slider(wijk_name,cluster_num):
+def update_slider(wijk_name):
 
     if wijk_name == 'HadoksArea':    
 
-        dff = df_demand_CLUSTERED_Year.query("GMN in @values_hadoks")     
-        options = list(dff.Wijknaam.unique())
-        dff = dff.query("Cluster_Reworked in @cluster_num")
-        options2 = list(dff.Wijknaam.unique())
+        # dff = df_demand_CLUSTERED_Year.query("GMN in @values_hadoks")     
+        # options = list(dff.Wijknaam.unique())
+        # dff = dff.query("Cluster_Reworked in @cluster_num")
+        # options2 = list(dff.Wijknaam.unique())
         options = [' Wijk 01 Oostduinen', ' Wijk 02 Belgisch Park',
        ' Wijk 04 Benoordenhout', ' Wijk 05 Archipelbuurt',
        ' Wijk 09 Geuzen- en Statenkwartier', ' Wijk 11 Duinoord',
@@ -642,23 +655,72 @@ def update_slider(wijk_name,cluster_num):
         
     elif wijk_name == "'s-gravenhage":    
 
-        dff = df_demand_CLUSTERED_Year[df_demand_CLUSTERED_Year.GMN == "'s-Gravenhage"]        
-        options = list(dff.Wijknaam.unique())
-        dff = dff[dff.YEAR == 2020].query("Cluster_Reworked in @cluster_num")
-        options2 = list(dff.Wijknaam.unique())
+        # dff = df_demand_CLUSTERED_Year[df_demand_CLUSTERED_Year.GMN == "Gemeente 's-Gravenhage"]        
+        # options = list(dff.Wijknaam.unique())
+        options = [' Wijk 01 Oostduinen', ' Wijk 02 Belgisch Park',
+       ' Wijk 04 Benoordenhout', ' Wijk 05 Archipelbuurt',
+       ' Wijk 09 Geuzen- en Statenkwartier', ' Wijk 11 Duinoord',
+       ' Wijk 12 Bomen- en Bloemenbuurt', ' Wijk 13 Vogelwijk',
+       ' Wijk 19 Vruchtenbuurt', ' Wijk 23 Willemspark',
+       ' Wijk 26 Bezuidenhout', ' Wijk 40 Wateringse Veld',
+       ' Wijk 42 Ypenburg', ' Wijk 44 Leidschenveen',
+       ' Wijk 03 Westbroekpark en Duttendel', ' Wijk 07 Scheveningen',
+       ' Wijk 08 Duindorp', ' Wijk 14 Bohemen en Meer en Bos',
+       ' Wijk 15 Kijkduin en Ockenburgh',
+       ' Wijk 16 Kraayenstein en Vroondaal', ' Wijk 17 Loosduinen',
+       ' Wijk 18 Waldeck', ' Wijk 25 Mariahoeve en Marlot',
+       ' Wijk 32 Leyenburg', ' Wijk 06 Van Stolkpark en Scheveningse Bo',
+       ' Wijk 10 Zorgvliet', ' Wijk 24 Haagse Bos', ' Wijk 41 Hoornwijk',
+       ' Wijk 43 Forepark', ' Wijk 20 Valkenboskwartier',
+       ' Wijk 21 Regentessekwartier', ' Wijk 22 Zeeheldenkwartier',
+       ' Wijk 27 Stationsbuurt', ' Wijk 28 Centrum',
+       ' Wijk 29 Schildersbuurt', ' Wijk 30 Transvaalkwartier',
+       ' Wijk 31 Rustenburg en Oostbroek',
+       ' Wijk 33 Bouwlust en Vrederust', ' Wijk 34 Morgenstond',
+       ' Wijk 35 Zuiderpark', ' Wijk 36 Moerwijk',
+       ' Wijk 37 Groente- en Fruitmarkt',
+       ' Wijk 38 Laakkwartier en Spoorwijk', ' Wijk 39 Binckhorst']
+        # dff = dff[dff.YEAR == 2020].query("Cluster_Reworked in @cluster_num")
+        # options2 = list(dff.Wijknaam.unique())
         
     elif wijk_name == "Wassenaar":    
 
-        dff = df_demand_CLUSTERED_Year[df_demand_CLUSTERED_Year.GMN == "Wassenaar"]
-        options = list(dff.Wijknaam.unique())
-        dff = dff[dff.YEAR == 2020].query("Cluster_Reworked in @cluster_num")
-        options2 = list(dff.Wijknaam.unique())
+        # dff = df_demand_CLUSTERED_Year[df_demand_CLUSTERED_Year.GMN == "Gemeente Wassenaar"]
+        # options = list(dff.Wijknaam.unique())
+        # dff = dff[dff.YEAR == 2020].query("Cluster_Reworked in @cluster_num")
+        # options2 = list(dff.Wijknaam.unique())
+        options = [' Wijk 00 Zuidwestelijk deel der gemeente',
+       ' Wijk 01 Noordoostelijk deel der gemeente']
+
+    elif wijk_name == "Rijswijk":   
+
+        # dff = df_demand_CLUSTERED_Year[df_demand_CLUSTERED_Year.GMN == "Gemeente Wassenaar"]
+        # options = list(dff.Wijknaam.unique())
+        # dff = dff[dff.YEAR == 2020].query("Cluster_Reworked in @cluster_num")
+        # options2 = list(dff.Wijknaam.unique())
+        options = [' Wijk 01', ' Wijk 11', ' Wijk 02', ' Wijk 04', ' Wijk 06',
+       ' Wijk 07', ' Wijk 08', ' Wijk 09', ' Wijk 03', ' Wijk 05',
+       ' Wijk 10']
         
+    elif wijk_name == "Leidschendam-Voorburg":   
+
+        # dff = df_demand_CLUSTERED_Year[df_demand_CLUSTERED_Year.GMN == "Gemeente Wassenaar"]
+        # options = list(dff.Wijknaam.unique())
+        # dff = dff[dff.YEAR == 2020].query("Cluster_Reworked in @cluster_num")
+        # options2 = list(dff.Wijknaam.unique())
+        options = [' Wijk Stompwijk', ' Wijk Voorburg Noord',
+       ' Wijk Voorburg West / Park Leeuwenbergh', ' Wijk Voorburg Oud',
+       ' Wijk De Zijde / Duivenvoorde / Park Veursehou',
+       ' Wijk Prinsenhof', " Wijk 't Lien / De Rietvink",
+       ' Wijk Leidschendam - Zuid en omgeving',
+       ' Wijk De Heuvel / Amstelwijk', ' Wijk 07 Damsigt en omgeving',
+       ' Wijk Essesteijn', ' Wijk Voorburg Midden', ' Wijk Bovenveen']
+                      
     else:
-        dff = df_demand_CLUSTERED_Year[df_demand_CLUSTERED_Year.GMN == wijk_name]
+        dff = df_demand_CLUSTERED_Year[df_demand_CLUSTERED_Year.GMN == ('Gemeente ' + wijk_name)]
         options = list(dff.Wijknaam.unique())
-        dff = dff[dff.YEAR == 2020].query("Cluster_Reworked in @cluster_num")
-        options2 = list(dff.Wijknaam.unique())
+        # dff = dff[dff.YEAR == 2020].query("Cluster_Reworked in @cluster_num")
+        # options2 = list(dff.Wijknaam.unique())
        
     return options, options
 
