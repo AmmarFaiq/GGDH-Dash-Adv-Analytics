@@ -82,6 +82,7 @@ df_demand_CLUSTERED_Year = pd.read_csv(path + 'df_demand_CLUSTERED_Year_2.csv')
 
 
 df_supply_CLUSTERED = pd.read_csv(path + 'df_supply_CLUSTERED_3.csv')
+df_supply_CLUSTERED = df_supply_CLUSTERED.drop(columns=['GMN'])
 
 # order df_demand_CLUSTERED_Year by YEAR
 df_demand_CLUSTERED_Year = df_demand_CLUSTERED_Year.sort_values(by=['YEAR','Cluster_Reworked'])
@@ -1260,7 +1261,7 @@ def update_graph_map(
     # supply_var_id
 
     # merge supply and demand
-    df_supply_demand_CLUSTERED_only = dff_demand[dff_demand.YEAR == 2020].merge(df_supply_CLUSTERED, on=['WKC','GMN'], how='left')[['WKC','GMN','Wijknaam','ZVWKHUISARTS_MEAN','Cluster_Reworked_Number','cluster_y','Total_Population','Doctors','Nurses','Practices']]
+    df_supply_demand_CLUSTERED_only = dff_demand[dff_demand.YEAR == 2020].merge(df_supply_CLUSTERED, on=['WKC'], how='left')[['WKC','GMN','Wijknaam','ZVWKHUISARTS_MEAN','Cluster_Reworked_Number','cluster_y','Total_Population','Doctors','Nurses','Practices']]
     df_supply_demand_CLUSTERED_only = df_supply_demand_CLUSTERED_only.merge(df_projected[df_projected.YEAR == 2030][['WKC','Projection_demand','Total_Population']], on=['WKC'], how='left')
 
     # Supply Cluster values assignment for supply index
