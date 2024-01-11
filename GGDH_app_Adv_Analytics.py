@@ -103,7 +103,8 @@ CATEGORICAL_COLUMN_NAME = ['Total_Population',
                            ,'%_ZVWKHUISARTS_user', '%_ZVWKFARMACIE_user', '%_ZVWKZIEKENHUIS_user', '%_ZVWKOSTENPSYCHO_user', 
                            '%_HVZ_Medication_user','%_DIAB_Medication_user','%_BLOEDDRUKV_Medication_user', '%_CHOL_Medication_user',
                            '%_UniqueMed_Count_>=5', '%_UniqueMed_Count_>=10', 
-                           '%_Hypertensie_patients', '%_COPD_patients', '%_Diabetes_I_patients','%_Diabetes_II_patients', '%_Chronic_Hartfalen_patients', '%_Morbus_Parkinson_patients', '%_Heupfractuur_patients','%_BMIUP45_patients'
+                           '%_Hypertensie_patients', '%_COPD_patients', '%_Diabetes_I_patients','%_Diabetes_II_patients', '%_Chronic_Hartfalen_patients', '%_Morbus_Parkinson_patients', '%_Heupfractuur_patients','%_BMIUP45_patients', '%_Lung_Cancer_patients', '%_Colon_Cancer_patients', '%_Back_pain_patients', 
+                           '%_HGOPL_Low','%_HGOPL_Mid', '%_HGOPL_High'
                            ]
 COSTS_COLUMN_NAME = ['ZVWKOSTENTOTAAL_MEAN', 'ZVWKHUISARTS_MEAN', 'ZVWKHUISARTS_NO_REG_MEAN', 
                      'ZVWKZIEKENHUIS_MEAN','ZVWKFARMACIE_MEAN', 'ZVWKFARMACIE_MEAN', 'ZVWKOSTENPSYCHO_MEAN',
@@ -391,7 +392,11 @@ app.layout = html.Div([
                                 
                             ], className='row'),
                         
-
+                            html.Div([
+                                html.P("Select year of interest", id='select_year'),
+                                dcc.Slider(step=1, marks = {i:str(i) for i in [(i) for i in range(2012, 2021)]}, min = 2012, max = 2020, value=2020, id = 'slider_select_year'),
+                                # dcc.Dropdown( id = 'drop_select_year', className= "custom_select") #when resolution is small, slider is no longer practical
+                            ], style={  'margin-left' : '15%', 'margin-right' : '35%', 'padding':'1%'}, id= 'sliderContainer'),
                             dcc.Graph(id='map', style={'position':'relative',  'height':'500px', 'top':'10px'
                                                        }),
 
@@ -726,11 +731,13 @@ def update_slider(wijk_name):
     Output('map', 'figure'),
     Output('title_map', 'children'),
     Input('drop_wijk', 'value'),
-    Input('drop_wijk_spec_id', 'value')
+    Input('drop_wijk_spec_id', 'value'),
+    Input('slider_select_year', 'value')
     )
 def update_graph_map( 
     wijk_name, 
-    wijk_spec
+    wijk_spec,
+    cluster_year
                  ):
     
     colorscale = ["#402580", 
@@ -747,25 +754,29 @@ def update_graph_map(
                   ]
 
 
-    title = 'Clustering of Neighbourhoods in ' + wijk_name + ' in 2020'
+    title = 'Clustering of Neighbourhoods in ' + wijk_name + ' in ' + str(cluster_year)
         
     dff = df_demand_CLUSTERED_Year.query("Wijknaam in @wijk_spec")
-    dff['Cluster Name'] = dff['Cluster_Reworked'].map({'1':'1 - Higher Care Cost - Lower SES - Younger Population - Higher Ethnic Minority', 
+    dff['Cluster Name'] = dff['Cluster_Reworked'].map({
+                                                        '1':'1 - Higher Care Cost - Lower SES - Younger Population - Higher Ethnic Minority', 
                                                        '2':'2 - Higher Care Cost-Higher SES - Older Population - Lower Ethnic Minority', 
                                                        '3':'3 - Lower Care Cost - Lower SES - Younger Population - Higher Minority', 
-                                                       '4':'4 - Lower Care Cost - Higher SES - Older Population - Lower Minority'})
+                                                       '4' :'4 - Lower Care Cost - Higher SES - Older Population - Lower Minority',
+                                                       '0':'5 - Mix Care Cost - Mix SES - Mix Population - Mix Minority'
+                                                       })
 
 
-    fig = px.choropleth_mapbox(dff[dff.YEAR == 2020], geojson=geo_df, color="Cluster Name",
+    fig = px.choropleth_mapbox(dff[dff.YEAR == cluster_year], geojson=geo_df, color="Cluster Name",
                                     locations="WKC", featureidkey="properties.WK_CODE", opacity = 0.4,
                                     center={"lat": 52.1, "lon": 4.24},
                                     mapbox_style="carto-positron", zoom=9.5,hover_name="Wijknaam", 
-                                                           # animation_frame="YEAR", 
+                                                            #animation_frame="YEAR",
                                     color_discrete_map={
                                                         '1 - Higher Care Cost - Lower SES - Younger Population - Higher Ethnic Minority':'red',
                                                         '2 - Higher Care Cost-Higher SES - Older Population - Lower Ethnic Minority':'firebrick',
                                                         '3 - Lower Care Cost - Lower SES - Younger Population - Higher Minority':'sandybrown',
-                                                        '4 - Lower Care Cost - Higher SES - Older Population - Lower Minority':'darkorange'}
+                                                        '4 - Lower Care Cost - Higher SES - Older Population - Lower Minority':'darkorange',
+                                                        '5 - Mix Care Cost - Mix SES - Mix Population - Mix Minority':'orange'}
                                     )
     fig.update_layout(geo=dict(bgcolor= 'rgba(0,0,0,0)', lakecolor='#4E5D6C'),
                                 autosize=False,
