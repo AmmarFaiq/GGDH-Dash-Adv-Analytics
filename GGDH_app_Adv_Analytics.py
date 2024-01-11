@@ -62,8 +62,6 @@ df['Wijknaam'] = df['Wijknaam'].str.replace('Wijk Wijk ', 'Wijk ')
 df_demand_CLUSTERED = pd.read_csv(path + 'df_demand_CLUSTERED_3.csv')
 df_demand_CLUSTERED_proj = pd.read_csv(path + 'df_demand_CLUSTERED_proj_3.csv')
 data_projected_clust_pred = pd.read_csv(path + 'data_projected_clust_pred_3.csv')
-df_demand_CLUSTERED = pd.read_csv(path + 'df_demand_CLUSTERED_2.csv')
-data_projected_clust_pred = pd.read_csv(path + 'data_projected_clust_pred_2.csv')
 
 # change negative values to 0
 cols = data_projected_clust_pred.select_dtypes(include=np.number).columns
@@ -77,8 +75,6 @@ df_demand_CLUSTERED_proj[cols] = df_demand_CLUSTERED_proj[cols].clip(lower=0)
 df_demand_CLUSTERED_proj['Total_Population'] = df_demand_CLUSTERED_proj['Total_Population'].astype(int)
 
 df_demand_CLUSTERED_Year = pd.read_csv(path + 'df_demand_CLUSTERED_Year_3.csv')
-
-df_demand_CLUSTERED_Year = pd.read_csv(path + 'df_demand_CLUSTERED_Year_2.csv')
 
 
 df_supply_CLUSTERED = pd.read_csv(path + 'df_supply_CLUSTERED_3.csv')
