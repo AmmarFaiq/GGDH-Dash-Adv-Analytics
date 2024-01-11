@@ -626,7 +626,7 @@ def update_slider(wijk_name,cluster_num):
         dff = dff[dff.YEAR == 2020].query("Cluster_Reworked in @cluster_num")
         options2 = list(dff.Wijknaam.unique())
        
-    return options, options2
+    return options, options
 
 
 @app.callback(
@@ -734,6 +734,7 @@ def update_graph(
     #             "#C2FFE3",
     #             "#DAFFE6"
     #               ]
+        
     colorscale = ["#03045E", "#023E8A", "#0077B6", "#0096C7", "#00B4D8", "#FF9E00", "#FF9100", "#FF8500", "#FF6D00", "#FF5400"]
     
     
