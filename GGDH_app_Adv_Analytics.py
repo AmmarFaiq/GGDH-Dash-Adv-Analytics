@@ -721,10 +721,10 @@ app.layout = html.Div([
     ],
     [
         Input('drop_wijk', 'value'),
-        # Input('choose_cluster_id', 'value')
+        Input('choose_cluster_id', 'value')
     ]
 )
-def update_slider(wijk_name):
+def update_slider(wijk_name, cluster_num):
 
     if wijk_name == 'Hadoks Area':    
         hadoks_area_gementee = ["Gemeente 's-Gravenhage", 'Gemeente Wassenaar', 'Gemeente Rijswijk', 'Gemeente Leidschendam-Voorburg']
