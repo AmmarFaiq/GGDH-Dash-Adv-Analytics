@@ -17,21 +17,6 @@ import json
 import math
 from plotly.subplots import make_subplots
 
-# values_haaglanden=["'s-Gravenhage",
-#         "Delft","Leidschendam-Voorburg",
-#         "Midden-Delfland", 
-#         "Pijnacker-Nootdorp","Rijswijk",
-#         "Wassenaar","Westland","Zoetermeer"]
-
-# values_roaz=["'s-Gravenhage", "Alphen aan den Rijn", "Bodegraven-Reeuwijk",
-#         "Delft","Gouda","Hillegom", "Kaag en Braassem","Katwijk",
-#         "Krimpenerwaard","Leiden","Leiderdorp", "Leidschendam-Voorburg",
-#         "Lisse","Midden-Delfland","Nieuwkoop","Noordwijk","Oegstgeest",
-#         "Pijnacker-Nootdorp","Rijswijk","Teylingen","Voorschoten", "Waddinxveen",
-#         "Wassenaar","Westland","Zoetermeer","Zoeterwoude","Zuidplas"]
-
-# values_all_regions = values_haaglanden + values_roaz
-
 values_hadoks= ["'s-Gravenhage", "Leidschendam-Voorburg", "Rijswijk", "Wassenaar"]
 
 
@@ -412,14 +397,14 @@ app.layout = html.Div([
                                             clearable=False, 
                                             searchable=False, 
                                             options=[
-                                                {'label': "Hadoks Area", 'value': "HadoksArea"},
+                                                {'label': "Hadoks Area", 'value': "Hadoks Area"},
                                                 {'label': "'s-gravenhage", 'value': "'s-gravenhage"},
                                                 {'label': "Rijswijk", 'value': "Rijswijk"},
                                                 {'label': 'Leidschendam-Voorburg', 'value': 'Leidschendam-Voorburg'},
                                                 {'label': 'Wassenaar', 'value': 'Wassenaar'},
 
                                                     ],
-                                                value="HadoksArea", 
+                                                value="Hadoks Area", 
                                                 style= {'margin': '4px', 'box-shadow': '0px 0px #ebb36a', 'border-color': '#ebb36a'}
                                             ), 
                                                     ], style={'width': '15%','display': 'inline-block'}),
