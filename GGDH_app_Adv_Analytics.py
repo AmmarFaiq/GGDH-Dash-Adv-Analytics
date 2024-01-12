@@ -712,7 +712,7 @@ app.layout = html.Div([
 def update_slider(wijk_name, cluster_num):
 
     if wijk_name == 'Hadoks Area':    
-        hadoks_area_gementee = ['Gemeente Wassenaar', 'Gemeente Rijswijk', 'Gemeente Leidschendam-Voorburg']
+        hadoks_area_gementee = ["Gemeente 's-Gravenhage", 'Gemeente Wassenaar', 'Gemeente Rijswijk', 'Gemeente Leidschendam-Voorburg']
         dff = df_demand_CLUSTERED_Year.query("GMN in @hadoks_area_gementee")     
         options = list(dff.Wijknaam.unique())
         dff = dff[dff.YEAR == 2020].query("Cluster_Reworked in @cluster_num")
