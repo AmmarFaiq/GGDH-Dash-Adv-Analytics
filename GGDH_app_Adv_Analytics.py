@@ -88,7 +88,7 @@ CATEGORICAL_COLUMN_NAME = ['Total_Population',
                            ,'%_ZVWKHUISARTS_user', '%_ZVWKFARMACIE_user', '%_ZVWKZIEKENHUIS_user', '%_ZVWKOSTENPSYCHO_user', 
                            '%_HVZ_Medication_user','%_DIAB_Medication_user','%_BLOEDDRUKV_Medication_user', '%_CHOL_Medication_user',
                            '%_UniqueMed_Count_>=5', '%_UniqueMed_Count_>=10', 
-                           '%_Hypertensie_patients', '%_COPD_patients', '%_Diabetes_I_patients','%_Diabetes_II_patients', '%_Chronic_Hartfalen_patients', '%_Morbus_Parkinson_patients', '%_Heupfractuur_patients','%_BMIUP45_patients', '%_Lung_Cancer_patients', '%_Colon_Cancer_patients', '%_Back_pain_patients', 
+                           '%_Hypertensie_patients', '%_COPD_patients', '%_Diabetes_I_patients','%_Diabetes_II_patients', '%_Chronic_Hartfalen_patients', '%_Morbus_Parkinson_patients', '%_Heupfractuur_patients','%_BMIUP45_patients', #'%_Lung_Cancer_patients', '%_Colon_Cancer_patients', '%_Back_pain_patients', 
                            '%_HGOPL_Low','%_HGOPL_Mid', '%_HGOPL_High'
                            ]
 COSTS_COLUMN_NAME = ['ZVWKOSTENTOTAAL_MEAN', 'ZVWKHUISARTS_MEAN', 'ZVWKHUISARTS_NO_REG_MEAN', 
